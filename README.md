@@ -8,7 +8,8 @@
  - [김태욱](https://github.com/taeuk178)
 
 ## 커리큘럼 
-유투버 바킹독님이 제시해주신 커리큘럼으로 진행! [강의자료](https://www.youtube.com/playlist?list=PLtqbFd2VIQv4O6D6l9HcD732hdrnYb6CY)
+유투버 바킹독님이 제시해주신 커리큘럼으로 진행! 
+-> [강의영상](https://www.youtube.com/playlist?list=PLtqbFd2VIQv4O6D6l9HcD732hdrnYb6CY) <-
 | 번호 | 주제 |
 | :--: | :--: |
 | 01 | [기초 코드 작성 요령 II](https://www.acmicpc.net/workbook/view/7306) |
