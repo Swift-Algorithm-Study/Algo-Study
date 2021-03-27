@@ -19,18 +19,12 @@
 
 import Foundation
 
-if let input: String = readLine() {
-    let separatedInput: [String] = input.components(separatedBy: " ")
-    
-    if
-        let intA: Int = Int(separatedInput[0]),
-        let intB: Int = Int(separatedInput[1]),
-        1 <= intA, intB <= 10000 {
-        
-        print(intA + intB)
-        print(intA - intB)
-        print(intA * intB)
-        print(intA / intB)
-        print(intA % intB)
-    }
-}
+let numbers: [Int] = readLine()!
+    .components(separatedBy: " ")
+    .compactMap { Int($0) }
+
+print(numbers[0] + numbers[1])
+print(numbers[0] - numbers[1])
+print(numbers[0] * numbers[1])
+print(numbers[0] / numbers[1])
+print(numbers[0] % numbers[1])

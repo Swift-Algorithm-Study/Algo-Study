@@ -19,15 +19,10 @@
 
 import Foundation
 
-if let input: String = readLine() {
-    let separatedInput: [String] = input.components(separatedBy: " ")
-    
-    if
-        let intA: Int = Int(separatedInput[0]),
-        let intB: Int = Int(separatedInput[1]),
-        0 < intA, intB < 10 {
-        
-        print(intA + intB)
-    }
-}
+let output: Int = readLine()!
+    .components(separatedBy: " ")
+    .compactMap { Int($0) }
+    .reduce(Int()) { $0 + $1 }
+
+print(output)
 

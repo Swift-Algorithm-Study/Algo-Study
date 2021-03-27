@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6B17C4B7260F7B2E00AEC4BD /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B17C4B6260F7B2E00AEC4BD /* main.swift */; };
+		6B17C4DD260F9E2C00AEC4BD /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B17C4C9260F940100AEC4BD /* main.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,7 +32,11 @@
 		6B17C49E260F6E0E00AEC4BD /* ExamScore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamScore.swift; sourceTree = "<group>"; };
 		6B17C4A4260F719A00AEC4BD /* SortingWhenWashFace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortingWhenWashFace.swift; sourceTree = "<group>"; };
 		6B17C4B1260F787100AEC4BD /* LeapYear.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeapYear.swift; sourceTree = "<group>"; };
-		6B17C4B6260F7B2E00AEC4BD /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		6B17C4B6260F7B2E00AEC4BD /* ThreeDices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeDices.swift; sourceTree = "<group>"; };
+		6B17C4BA260F8B6700AEC4BD /* PrintStars1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintStars1.swift; sourceTree = "<group>"; };
+		6B17C4BF260F905500AEC4BD /* PrintStars2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintStars2.swift; sourceTree = "<group>"; };
+		6B17C4C5260F931E00AEC4BD /* PrintStars3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintStars3.swift; sourceTree = "<group>"; };
+		6B17C4C9260F940100AEC4BD /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +69,14 @@
 		6B17C47C260F149B00AEC4BD /* AlgoStudy */ = {
 			isa = PBXGroup;
 			children = (
+				6B17C4CC260F940500AEC4BD /* BasicTips2 */,
+			);
+			path = AlgoStudy;
+			sourceTree = "<group>";
+		};
+		6B17C4CC260F940500AEC4BD /* BasicTips2 */ = {
+			isa = PBXGroup;
+			children = (
 				6B17C47D260F149B00AEC4BD /* A+B.swift */,
 				6B17C485260F52A800AEC4BD /* HelloWorld.swift */,
 				6B17C48A260F54C000AEC4BD /* Cat.swift */,
@@ -73,9 +85,13 @@
 				6B17C49E260F6E0E00AEC4BD /* ExamScore.swift */,
 				6B17C4A4260F719A00AEC4BD /* SortingWhenWashFace.swift */,
 				6B17C4B1260F787100AEC4BD /* LeapYear.swift */,
-				6B17C4B6260F7B2E00AEC4BD /* main.swift */,
+				6B17C4B6260F7B2E00AEC4BD /* ThreeDices.swift */,
+				6B17C4BA260F8B6700AEC4BD /* PrintStars1.swift */,
+				6B17C4BF260F905500AEC4BD /* PrintStars2.swift */,
+				6B17C4C5260F931E00AEC4BD /* PrintStars3.swift */,
+				6B17C4C9260F940100AEC4BD /* main.swift */,
 			);
-			path = AlgoStudy;
+			path = BasicTips2;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +151,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B17C4B7260F7B2E00AEC4BD /* main.swift in Sources */,
+				6B17C4DD260F9E2C00AEC4BD /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
