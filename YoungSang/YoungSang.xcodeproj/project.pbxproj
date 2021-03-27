@@ -7,16 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CE821216260E04F900BF2DA5 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE821215260E04F900BF2DA5 /* main.swift */; };
+		CEDB7774260EFF2B008F42E7 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDB7773260EFF2B008F42E7 /* main.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		CEDB776E260EFF2B008F42E7 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		CE8211FC260E048C00BF2DA5 /* GoYoungSang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoYoungSang.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE821215260E04F900BF2DA5 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		CEDB7770260EFF2B008F42E7 /* YoungSang */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = YoungSang; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEDB7773260EFF2B008F42E7 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		CE8211F9260E048C00BF2DA5 /* Frameworks */ = {
+		CEDB776D260EFF2B008F42E7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -26,66 +38,65 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		CE8211F3260E048C00BF2DA5 = {
+		CEDB7767260EFF2B008F42E7 = {
 			isa = PBXGroup;
 			children = (
-				CE8211FE260E048C00BF2DA5 /* GoYoungSang */,
-				CE8211FD260E048C00BF2DA5 /* Products */,
+				CEDB7772260EFF2B008F42E7 /* YoungSang */,
+				CEDB7771260EFF2B008F42E7 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		CE8211FD260E048C00BF2DA5 /* Products */ = {
+		CEDB7771260EFF2B008F42E7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CE8211FC260E048C00BF2DA5 /* GoYoungSang.app */,
+				CEDB7770260EFF2B008F42E7 /* YoungSang */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CE8211FE260E048C00BF2DA5 /* GoYoungSang */ = {
+		CEDB7772260EFF2B008F42E7 /* YoungSang */ = {
 			isa = PBXGroup;
 			children = (
-				CE821215260E04F900BF2DA5 /* main.swift */,
+				CEDB7773260EFF2B008F42E7 /* main.swift */,
 			);
-			path = GoYoungSang;
+			path = YoungSang;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CE8211FB260E048C00BF2DA5 /* GoYoungSang */ = {
+		CEDB776F260EFF2B008F42E7 /* YoungSang */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CE821210260E048F00BF2DA5 /* Build configuration list for PBXNativeTarget "GoYoungSang" */;
+			buildConfigurationList = CEDB7777260EFF2B008F42E7 /* Build configuration list for PBXNativeTarget "YoungSang" */;
 			buildPhases = (
-				CE8211F8260E048C00BF2DA5 /* Sources */,
-				CE8211F9260E048C00BF2DA5 /* Frameworks */,
-				CE8211FA260E048C00BF2DA5 /* Resources */,
+				CEDB776C260EFF2B008F42E7 /* Sources */,
+				CEDB776D260EFF2B008F42E7 /* Frameworks */,
+				CEDB776E260EFF2B008F42E7 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = GoYoungSang;
-			productName = GoYoungSang;
-			productReference = CE8211FC260E048C00BF2DA5 /* GoYoungSang.app */;
-			productType = "com.apple.product-type.application";
+			name = YoungSang;
+			productName = YoungSang;
+			productReference = CEDB7770260EFF2B008F42E7 /* YoungSang */;
+			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		CE8211F4260E048C00BF2DA5 /* Project object */ = {
+		CEDB7768260EFF2B008F42E7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
-					CE8211FB260E048C00BF2DA5 = {
+					CEDB776F260EFF2B008F42E7 = {
 						CreatedOnToolsVersion = 12.4;
-						LastSwiftMigration = 1240;
 					};
 				};
 			};
-			buildConfigurationList = CE8211F7260E048C00BF2DA5 /* Build configuration list for PBXProject "GoYoungSang" */;
+			buildConfigurationList = CEDB776B260EFF2B008F42E7 /* Build configuration list for PBXProject "YoungSang" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -93,39 +104,29 @@
 				en,
 				Base,
 			);
-			mainGroup = CE8211F3260E048C00BF2DA5;
-			productRefGroup = CE8211FD260E048C00BF2DA5 /* Products */;
+			mainGroup = CEDB7767260EFF2B008F42E7;
+			productRefGroup = CEDB7771260EFF2B008F42E7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CE8211FB260E048C00BF2DA5 /* GoYoungSang */,
+				CEDB776F260EFF2B008F42E7 /* YoungSang */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXResourcesBuildPhase section */
-		CE8211FA260E048C00BF2DA5 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		CE8211F8260E048C00BF2DA5 /* Sources */ = {
+		CEDB776C260EFF2B008F42E7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE821216260E04F900BF2DA5 /* main.swift in Sources */,
+				CEDB7774260EFF2B008F42E7 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		CE82120E260E048F00BF2DA5 /* Debug */ = {
+		CEDB7775260EFF2B008F42E7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -176,17 +177,17 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
+				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		CE82120F260E048F00BF2DA5 /* Release */ = {
+		CEDB7776260EFF2B008F42E7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -231,77 +232,55 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				SDKROOT = iphoneos;
+				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		CE821211260E048F00BF2DA5 /* Debug */ = {
+		CEDB7778260EFF2B008F42E7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = GoYoungSang/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = sang.GoYoungSang;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		CE821212260E048F00BF2DA5 /* Release */ = {
+		CEDB7779260EFF2B008F42E7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = GoYoungSang/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = sang.GoYoungSang;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CE8211F7260E048C00BF2DA5 /* Build configuration list for PBXProject "GoYoungSang" */ = {
+		CEDB776B260EFF2B008F42E7 /* Build configuration list for PBXProject "YoungSang" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CE82120E260E048F00BF2DA5 /* Debug */,
-				CE82120F260E048F00BF2DA5 /* Release */,
+				CEDB7775260EFF2B008F42E7 /* Debug */,
+				CEDB7776260EFF2B008F42E7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CE821210260E048F00BF2DA5 /* Build configuration list for PBXNativeTarget "GoYoungSang" */ = {
+		CEDB7777260EFF2B008F42E7 /* Build configuration list for PBXNativeTarget "YoungSang" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CE821211260E048F00BF2DA5 /* Debug */,
-				CE821212260E048F00BF2DA5 /* Release */,
+				CEDB7778260EFF2B008F42E7 /* Debug */,
+				CEDB7779260EFF2B008F42E7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = CE8211F4260E048C00BF2DA5 /* Project object */;
+	rootObject = CEDB7768260EFF2B008F42E7 /* Project object */;
 }
