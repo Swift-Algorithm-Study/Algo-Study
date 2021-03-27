@@ -25,6 +25,14 @@
 /* Begin PBXFileReference section */
 		A97A2BDC260E052800BC9BF0 /* TaeUk_Algo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TaeUk_Algo; sourceTree = BUILT_PRODUCTS_DIR; };
 		A97A2BDF260E052800BC9BF0 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		A99DB871260F09F700E8CCD1 /* A+B.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "A+B.swift"; sourceTree = "<group>"; };
+		A99DB87A260F0D5C00E8CCD1 /* Cat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cat.swift; sourceTree = "<group>"; };
+		A99DB87E260F0E9300E8CCD1 /* FourCalculations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourCalculations.swift; sourceTree = "<group>"; };
+		A99DB882260F131300E8CCD1 /* NumberLessThanX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberLessThanX.swift; sourceTree = "<group>"; };
+		A99DB887260F14E300E8CCD1 /* Grade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grade.swift; sourceTree = "<group>"; };
+		A99DB889260F172F00E8CCD1 /* NumbersSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersSort.swift; sourceTree = "<group>"; };
+		A99DB88E260F1C2800E8CCD1 /* LeapYear.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeapYear.swift; sourceTree = "<group>"; };
+		A99DB892260F222E00E8CCD1 /* ThreeDice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeDice.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +65,25 @@
 		A97A2BDE260E052800BC9BF0 /* TaeUk_Algo */ = {
 			isa = PBXGroup;
 			children = (
+				A99DB86F260F08B700E8CCD1 /* 01 */,
 				A97A2BDF260E052800BC9BF0 /* main.swift */,
 			);
 			path = TaeUk_Algo;
+			sourceTree = "<group>";
+		};
+		A99DB86F260F08B700E8CCD1 /* 01 */ = {
+			isa = PBXGroup;
+			children = (
+				A99DB871260F09F700E8CCD1 /* A+B.swift */,
+				A99DB87A260F0D5C00E8CCD1 /* Cat.swift */,
+				A99DB87E260F0E9300E8CCD1 /* FourCalculations.swift */,
+				A99DB882260F131300E8CCD1 /* NumberLessThanX.swift */,
+				A99DB887260F14E300E8CCD1 /* Grade.swift */,
+				A99DB889260F172F00E8CCD1 /* NumbersSort.swift */,
+				A99DB88E260F1C2800E8CCD1 /* LeapYear.swift */,
+				A99DB892260F222E00E8CCD1 /* ThreeDice.swift */,
+			);
+			path = 01;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
