@@ -7,15 +7,14 @@
 
 import Foundation
 
-let num = Int(readLine()!)
-let numX = Int(readLine()!)
 
-let numArr = readLine()!.split(separator: " ").map{ Int($0)! }.filter { ($0) < numX!}
+var num = readLine()!.split(separator: " ").map { Int($0)! }
+var numX = num[1]
+var numArr = readLine()!.split(separator: " ")
+var numArr2 = numArr.map{ Int($0)! }.filter{($0) < numX}
 
+//print(numArr2)
+for i in 0...(numArr2.count)-1{
+    print(numArr2[i], terminator:" ")
+}
 
-print((num)! , (numX)!)
-print(numArr)
-//for i in 0... num{
-//    if numArr[i] < numX
-//    print(numArr[i])
-//}
