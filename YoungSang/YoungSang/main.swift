@@ -1,26 +1,10 @@
+//
+//  2440.swift
+//  YoungSang
+//
+//  Created by 유저 on 2021/03/29.
+//
 
-
-/*
- 2439번
- 첫째 줄에는 별 1개, 둘째 줄에는 별 2개, N번째 줄에는 별 N개를 찍는 문제
-하지만, 오른쪽을 기준으로 정렬한 별(예제 참고)을 출력하시오.
-    *
-   **
-  ***
- ****
-*****
-*/
 import Foundation
 
-var num = Int(readLine()!)!
-
-for i in 1...num{
-    for _ in stride(from: num, to: i, by: -1) {
-        print(" ", terminator:"")
-    }
-    for _ in stride(from: 1, to: i, by: 1){
-        print("*", terminator:"")
-    }
-    print("")
-}
-
+let num = read

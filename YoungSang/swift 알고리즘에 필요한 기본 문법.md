@@ -37,7 +37,7 @@ array.sorted(by: >) //내림차순
 
 ######6. map, reduce, filter 정리 
 
-
+######7. 이중포문 + stride()
 
 출처: https://zeddios.tistory.com/86 [ZeddiOS]
 출처: https://twih1203.medium.com/swift-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%EC%97%90-%ED%95%84%EC%9A%94%ED%95%9C-swift-basic-%EC%B4%9D%EC%A0%95%EB%A6%AC-d86453bbeaa5
