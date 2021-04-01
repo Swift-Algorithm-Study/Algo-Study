@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		06783BF72615DBDE0028CB45 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06783BF62615DBDE0028CB45 /* main.swift */; };
+		06783BFB2615E0540028CB45 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06783BFA2615E0540028CB45 /* main.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,7 +25,8 @@
 /* Begin PBXFileReference section */
 		06783BEB2615D13B0028CB45 /* [BOJ] 2439.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "[BOJ] 2439.swift"; sourceTree = "<group>"; };
 		06783BF12615D9E20028CB45 /* [BOJ] 2440.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "[BOJ] 2440.swift"; sourceTree = "<group>"; };
-		06783BF62615DBDE0028CB45 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		06783BF62615DBDE0028CB45 /* [BOJ] 2441.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "[BOJ] 2441.swift"; sourceTree = "<group>"; };
+		06783BFA2615E0540028CB45 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		0699CF6A2612F1A8001C0693 /* [BOJ] 2557.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "[BOJ] 2557.swift"; sourceTree = "<group>"; };
 		0699CF6F2612F21D001C0693 /* [BOJ] 10171.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "[BOJ] 10171.swift"; sourceTree = "<group>"; };
 		0699CF742612F432001C0693 /* [BOJ] 10869.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "[BOJ] 10869.swift"; sourceTree = "<group>"; };
@@ -65,7 +66,8 @@
 				0699CF952613017B001C0693 /* [BOJ] 2438.swift */,
 				06783BEB2615D13B0028CB45 /* [BOJ] 2439.swift */,
 				06783BF12615D9E20028CB45 /* [BOJ] 2440.swift */,
-				06783BF62615DBDE0028CB45 /* main.swift */,
+				06783BF62615DBDE0028CB45 /* [BOJ] 2441.swift */,
+				06783BFA2615E0540028CB45 /* main.swift */,
 			);
 			name = "1주차";
 			path = "1주차";
@@ -153,7 +155,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				06783BF72615DBDE0028CB45 /* main.swift in Sources */,
+				06783BFB2615E0540028CB45 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
