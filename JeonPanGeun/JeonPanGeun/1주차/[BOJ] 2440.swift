@@ -9,11 +9,8 @@ import Foundation
 
 let n = Int(readLine()!)!
 
-for i in 0..<n {
-    for _ in (0..<i).reversed() {
-        print(" ", terminator: "")
-    }
-    for j in 0..<(n-i) {
+for i in (0..<n).reversed() {
+    for _ in (0...i) {
         print("*", terminator: "")
     }
     print("")
