@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		06C258E3260E030200E287FF /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C258E2260E030200E287FF /* main.swift */; };
+		06783BFB2615E0540028CB45 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06783BFA2615E0540028CB45 /* main.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +23,21 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		06783BEB2615D13B0028CB45 /* [BOJ] 2439.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "[BOJ] 2439.swift"; sourceTree = "<group>"; };
+		06783BF12615D9E20028CB45 /* [BOJ] 2440.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "[BOJ] 2440.swift"; sourceTree = "<group>"; };
+		06783BF62615DBDE0028CB45 /* [BOJ] 2441.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "[BOJ] 2441.swift"; sourceTree = "<group>"; };
+		06783BFA2615E0540028CB45 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		0699CF6A2612F1A8001C0693 /* [BOJ] 2557.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "[BOJ] 2557.swift"; sourceTree = "<group>"; };
+		0699CF6F2612F21D001C0693 /* [BOJ] 10171.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "[BOJ] 10171.swift"; sourceTree = "<group>"; };
+		0699CF742612F432001C0693 /* [BOJ] 10869.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "[BOJ] 10869.swift"; sourceTree = "<group>"; };
+		0699CF7A2612F6F5001C0693 /* [BOJ] 10871.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "[BOJ] 10871.swift"; sourceTree = "<group>"; };
+		0699CF812612FAEE001C0693 /* [BOJ] 9498.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "[BOJ] 9498.swift"; sourceTree = "<group>"; };
+		0699CF862612FC06001C0693 /* [BOJ] 2752.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "[BOJ] 2752.swift"; sourceTree = "<group>"; };
+		0699CF8B2612FD3C001C0693 /* [BOJ] 2753.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "[BOJ] 2753.swift"; sourceTree = "<group>"; };
+		0699CF902612FEB8001C0693 /* [BOJ] 2480.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "[BOJ] 2480.swift"; sourceTree = "<group>"; };
+		0699CF952613017B001C0693 /* [BOJ] 2438.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "[BOJ] 2438.swift"; sourceTree = "<group>"; };
 		06C258DF260E030200E287FF /* JeonPanGeun */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = JeonPanGeun; sourceTree = BUILT_PRODUCTS_DIR; };
-		06C258E2260E030200E287FF /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		06C258E2260E030200E287FF /* [BOJ] 1000.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "[BOJ] 1000.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +51,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0699CF662612F17E001C0693 /* 1주차 */ = {
+			isa = PBXGroup;
+			children = (
+				06C258E2260E030200E287FF /* [BOJ] 1000.swift */,
+				0699CF6A2612F1A8001C0693 /* [BOJ] 2557.swift */,
+				0699CF6F2612F21D001C0693 /* [BOJ] 10171.swift */,
+				0699CF742612F432001C0693 /* [BOJ] 10869.swift */,
+				0699CF7A2612F6F5001C0693 /* [BOJ] 10871.swift */,
+				0699CF812612FAEE001C0693 /* [BOJ] 9498.swift */,
+				0699CF862612FC06001C0693 /* [BOJ] 2752.swift */,
+				0699CF8B2612FD3C001C0693 /* [BOJ] 2753.swift */,
+				0699CF902612FEB8001C0693 /* [BOJ] 2480.swift */,
+				0699CF952613017B001C0693 /* [BOJ] 2438.swift */,
+				06783BEB2615D13B0028CB45 /* [BOJ] 2439.swift */,
+				06783BF12615D9E20028CB45 /* [BOJ] 2440.swift */,
+				06783BF62615DBDE0028CB45 /* [BOJ] 2441.swift */,
+				06783BFA2615E0540028CB45 /* main.swift */,
+			);
+			name = "1주차";
+			path = "1주차";
+			sourceTree = "<group>";
+		};
 		06C258D6260E030200E287FF = {
 			isa = PBXGroup;
 			children = (
@@ -57,7 +92,7 @@
 		06C258E1260E030200E287FF /* JeonPanGeun */ = {
 			isa = PBXGroup;
 			children = (
-				06C258E2260E030200E287FF /* main.swift */,
+				0699CF662612F17E001C0693 /* 1주차 */,
 			);
 			path = JeonPanGeun;
 			sourceTree = "<group>";
@@ -93,6 +128,7 @@
 				TargetAttributes = {
 					06C258DE260E030200E287FF = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
 					};
 				};
 			};
@@ -119,7 +155,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				06C258E3260E030200E287FF /* main.swift in Sources */,
+				06783BFB2615E0540028CB45 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,10 +280,18 @@
 		06C258E7260E030200E287FF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RKSNRHW63A;
 				ENABLE_HARDENED_RUNTIME = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "JeonPanGeun/1주차/JeonPanGeun-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -255,10 +299,17 @@
 		06C258E8260E030200E287FF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RKSNRHW63A;
 				ENABLE_HARDENED_RUNTIME = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "JeonPanGeun/1주차/JeonPanGeun-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
