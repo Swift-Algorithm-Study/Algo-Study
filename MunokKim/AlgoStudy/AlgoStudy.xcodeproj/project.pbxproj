@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6BBE88BA2618A264000BC102 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBE88B92618A264000BC102 /* main.swift */; };
+		6BBE88C82618DFD2000BC102 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBE88BE2618D44B000BC102 /* main.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -38,7 +38,8 @@
 		6B17C4C5260F931E00AEC4BD /* PrintStars3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintStars3.swift; sourceTree = "<group>"; };
 		6B17C4C9260F940100AEC4BD /* PrintStars4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintStars4.swift; sourceTree = "<group>"; };
 		6BBE88B426189223000BC102 /* Number.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Number.swift; sourceTree = "<group>"; };
-		6BBE88B92618A264000BC102 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		6BBE88B92618A264000BC102 /* PhoneFee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneFee.swift; sourceTree = "<group>"; };
+		6BBE88BE2618D44B000BC102 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,7 +95,8 @@
 				6B17C4C5260F931E00AEC4BD /* PrintStars3.swift */,
 				6B17C4C9260F940100AEC4BD /* PrintStars4.swift */,
 				6BBE88B426189223000BC102 /* Number.swift */,
-				6BBE88B92618A264000BC102 /* main.swift */,
+				6BBE88B92618A264000BC102 /* PhoneFee.swift */,
+				6BBE88BE2618D44B000BC102 /* main.swift */,
 			);
 			path = BasicTips2;
 			sourceTree = "<group>";
@@ -163,7 +165,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6BBE88BA2618A264000BC102 /* main.swift in Sources */,
+				6BBE88C82618DFD2000BC102 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
