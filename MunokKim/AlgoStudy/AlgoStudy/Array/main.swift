@@ -23,21 +23,29 @@
 
 import Foundation
 
-readLine()
+let numbersCount: Int = Int(readLine()!)!
 let numbers: [Int] = readLine()!
     .components(separatedBy: " ")
     .compactMap { Int($0) }
     .sorted()
 
 let intX: Int = Int(readLine()!)!
-var count: Int = 0
+var fairCount: Int = 0
+var startPointer: Int = 0
+var endPointer: Int = numbersCount - 1
 
-for firstNumberIndex in 0..<numbers.count {
-    for secondNumberIndex in firstNumberIndex+1..<numbers.count {
-        if intX == numbers[firstNumberIndex] + numbers[secondNumberIndex] {
-            count = count + 1
-        }
+while (startPointer < endPointer) {
+    let sum = numbers[startPointer] + numbers[endPointer]
+    
+    if sum == intX {
+        fairCount = fairCount + 1
+    }
+    
+    if sum <= intX {
+        startPointer = startPointer + 1
+    } else {
+        endPointer = endPointer - 1
     }
 }
 
-print(count)
+print(fairCount)
