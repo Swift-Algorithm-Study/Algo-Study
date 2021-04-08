@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		066AB484261F147B00CB91AA /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066AB483261F147B00CB91AA /* main.swift */; };
+		066AB489261F20F900CB91AA /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066AB488261F20F900CB91AA /* main.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,7 +25,8 @@
 /* Begin PBXFileReference section */
 		066AB478261EFC0300CB91AA /* [BOJ] 1267.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "[BOJ] 1267.swift"; sourceTree = "<group>"; };
 		066AB47D261F047200CB91AA /* [BOJ] 2309.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "[BOJ] 2309.swift"; sourceTree = "<group>"; };
-		066AB483261F147B00CB91AA /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		066AB483261F147B00CB91AA /* [BOJ] 11328.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "[BOJ] 11328.swift"; sourceTree = "<group>"; };
+		066AB488261F20F900CB91AA /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		06783BEB2615D13B0028CB45 /* [BOJ] 2439.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "[BOJ] 2439.swift"; sourceTree = "<group>"; };
 		06783BF12615D9E20028CB45 /* [BOJ] 2440.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "[BOJ] 2440.swift"; sourceTree = "<group>"; };
 		06783BF62615DBDE0028CB45 /* [BOJ] 2441.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "[BOJ] 2441.swift"; sourceTree = "<group>"; };
@@ -73,7 +74,8 @@
 				06783BFA2615E0540028CB45 /* [BOJ] 10093.swift */,
 				066AB478261EFC0300CB91AA /* [BOJ] 1267.swift */,
 				066AB47D261F047200CB91AA /* [BOJ] 2309.swift */,
-				066AB483261F147B00CB91AA /* main.swift */,
+				066AB483261F147B00CB91AA /* [BOJ] 11328.swift */,
+				066AB488261F20F900CB91AA /* main.swift */,
 			);
 			name = "1주차";
 			path = "1주차";
@@ -161,7 +163,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				066AB484261F147B00CB91AA /* main.swift in Sources */,
+				066AB489261F20F900CB91AA /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
