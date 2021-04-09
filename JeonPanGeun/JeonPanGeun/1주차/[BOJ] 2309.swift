@@ -14,13 +14,19 @@ for _ in 0..<9 {
 
 let dwarfsHeightSum = dwarfs.reduce(0, +)
 
+var flag: Bool = false
+
 for i in 0..<dwarfs.count-1 {
     for j in (i+1)..<dwarfs.count {
         if (dwarfsHeightSum - (dwarfs[i] + dwarfs[j])) == 100 {
             dwarfs[i] = 0
             dwarfs[j] = 0
+            flag = true
             break;
         }
+    }
+    if flag == true {
+        break;
     }
 }
 
