@@ -13,17 +13,17 @@ var testLinkedList = LinkedList<Int>(head: Node(value: 3, next: nil))
 testLinkedList.append(Node(value: 4, next: nil))
 testLinkedList.append(Node(value: 8, next: nil))
 
-print(testLinkedList.count)
-print(testLinkedList.remove(at: 2)!)
-print(testLinkedList.count)
+print(testLinkedList.count) // 3
+print(testLinkedList.remove(at: 2)!) // 8
+print(testLinkedList.count) // 2
 testLinkedList.append(Node(value: 2, next: nil))
-print(testLinkedList.isEmpty)
-print(testLinkedList.node(at: 1)!.value)
+print(testLinkedList.isEmpty) // false
+print(testLinkedList.node(at: 1)!.value) // 4
 testLinkedList.insert(Node(value: 9, next: nil), at: 1)
-print(testLinkedList.last!.value)
+print(testLinkedList.last!.value) // 2
 
 for i in 0..<testLinkedList.count {
     print(testLinkedList.node(at: i)!.value, terminator: " ")
-}
+} // 3 9 4 2
 
-print(testLinkedList.removeLast()!)
+print(testLinkedList.removeLast()!) // 2
