@@ -1,87 +1,46 @@
 //
-//  main.swift
+//  File.swift
 //  AlgoStudy
 //
 //  Created by 김문옥 on 2021/04/18.
 //
 
-// https://www.acmicpc.net/problem/10828
-// Baekjoon 10828번 스택
+// https://www.acmicpc.net/problem/10773
+// Baekjoon 10773번 제로
 
 //문제
-//정수를 저장하는 스택을 구현한 다음, 입력으로 주어지는 명령을 처리하는 프로그램을 작성하시오.
-//명령은 총 다섯 가지이다.
-//push X: 정수 X를 스택에 넣는 연산이다.
-//pop: 스택에서 가장 위에 있는 정수를 빼고, 그 수를 출력한다. 만약 스택에 들어있는 정수가 없는 경우에는 -1을 출력한다.
-//size: 스택에 들어있는 정수의 개수를 출력한다.
-//empty: 스택이 비어있으면 1, 아니면 0을 출력한다.
-//top: 스택의 가장 위에 있는 정수를 출력한다. 만약 스택에 들어있는 정수가 없는 경우에는 -1을 출력한다.
+//나코더 기장 재민이는 동아리 회식을 준비하기 위해서 장부를 관리하는 중이다.
+//재현이는 재민이를 도와서 돈을 관리하는 중인데, 애석하게도 항상 정신없는 재현이는 돈을 실수로 잘못 부르는 사고를 치기 일쑤였다.
+//재현이는 잘못된 수를 부를 때마다 0을 외쳐서, 가장 최근에 재민이가 쓴 수를 지우게 시킨다.
+//재민이는 이렇게 모든 수를 받아 적은 후 그 수의 합을 알고 싶어 한다. 재민이를 도와주자!
 
 //입력
-//첫째 줄에 주어지는 명령의 수 N (1 ≤ N ≤ 10,000)이 주어진다. 둘째 줄부터 N개의 줄에는 명령이 하나씩 주어진다. 주어지는 정수는 1보다 크거나 같고, 100,000보다 작거나 같다. 문제에 나와있지 않은 명령이 주어지는 경우는 없다.
-//14
-//push 1
-//push 2
-//top
-//size
-//empty
-//pop
-//pop
-//pop
-//size
-//empty
-//pop
-//push 3
-//empty
-//top
+//첫 번째 줄에 정수 K가 주어진다. (1 ≤ K ≤ 100,000)
+//이후 K개의 줄에 정수가 1개씩 주어진다. 정수는 0에서 1,000,000 사이의 값을 가지며, 정수가 "0" 일 경우에는 가장 최근에 쓴 수를 지우고, 아닐 경우 해당 수를 쓴다.
+//정수가 "0"일 경우에 지울 수 있는 수가 있음을 보장할 수 있다.
+//4
+//3
+//0
+//4
+//0
 
 //출력
-//출력해야하는 명령이 주어질 때마다, 한 줄에 하나씩 출력한다.
-//2
-//2
+//재민이가 최종적으로 적어 낸 수의 합을 출력한다. 최종적으로 적어낸 수의 합은 231-1보다 작거나 같은 정수이다.
 //0
-//2
-//1
-//-1
-//0
-//1
-//-1
-//0
-//3
 
 import Foundation
 
 var stack: Stack<Int> = Stack<Int>()
-let commandCount: Int = Int(readLine()!)!
-var commands: [String] = []
+let moneyCount: Int = Int(readLine()!)!
 
-for _ in 0..<commandCount {
-    commands.append(readLine()!)
-}
-
-for command in commands {
-    let _command: [String] = command.components(separatedBy: " ")
+for _ in 0..<moneyCount {
+    let money: Int = Int(readLine()!)!
     
-    switch _command.first! {
-    case "push":
-        let intToBePush: Int = Int(_command.last!)!
-        stack.push(intToBePush)
-    case "pop":
-        if let poppedInt: Int = stack.pop() {
-            print(poppedInt)
-        } else {
-            print(-1)
-        }
-    case "size":
-        print(stack.count)
-    case "empty":
-        print(stack.isEmpty ? 1 : 0)
-    case "top":
-        if let topInt: Int = stack.items.last {
-            print(topInt)
-        } else {
-            print(-1)
-        }
-    default: break
+    if money == 0 {
+        stack.pop()
+    } else {
+        stack.push(money)
     }
 }
+
+print(stack.items.reduce(0, +))
