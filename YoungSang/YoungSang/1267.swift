@@ -23,7 +23,7 @@ var phoneNumArr = phoneNum2.split(separator: " ").map{ Int($0)!}
 var ySick = 0, mSick = 0
 
 // 배열에 값을 받아서 y인지 m인지 정해주기?
-for i in 0...phoneNumArr.count-1{
+for i in 0..<phoneNumArr.count{
     ySick += (phoneNumArr[i]/30 + 1)*10
     mSick += (phoneNumArr[i]/60 + 1)*15
 }
