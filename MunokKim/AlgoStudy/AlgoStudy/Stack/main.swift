@@ -2,91 +2,53 @@
 //  main.swift
 //  AlgoStudy
 //
-//  Created by 김문옥 on 2021/04/18.
+//  Created by 김문옥 on 2021/04/19.
 //
 
-// https://www.acmicpc.net/problem/1874
-// Baekjoon 1874번 스택 수열
+// https://www.acmicpc.net/problem/2493
+// Baekjoon 2493번 탑
 
 //문제
-//스택 (stack)은 기본적인 자료구조 중 하나로, 컴퓨터 프로그램을 작성할 때 자주 이용되는 개념이다. 스택은 자료를 넣는 (push) 입구와 자료를 뽑는 (pop) 입구가 같아 제일 나중에 들어간 자료가 제일 먼저 나오는 (LIFO, Last in First out) 특성을 가지고 있다.
-//1부터 n까지의 수를 스택에 넣었다가 뽑아 늘어놓음으로써, 하나의 수열을 만들 수 있다. 이때, 스택에 push하는 순서는 반드시 오름차순을 지키도록 한다고 하자. 임의의 수열이 주어졌을 때 스택을 이용해 그 수열을 만들 수 있는지 없는지, 있다면 어떤 순서로 push와 pop 연산을 수행해야 하는지를 알아낼 수 있다. 이를 계산하는 프로그램을 작성하라.
+//KOI 통신연구소는 레이저를 이용한 새로운 비밀 통신 시스템 개발을 위한 실험을 하고 있다. 실험을 위하여 일직선 위에 N개의 높이가 서로 다른 탑을 수평 직선의 왼쪽부터 오른쪽 방향으로 차례로 세우고, 각 탑의 꼭대기에 레이저 송신기를 설치하였다. 모든 탑의 레이저 송신기는 레이저 신호를 지표면과 평행하게 수평 직선의 왼쪽 방향으로 발사하고, 탑의 기둥 모두에는 레이저 신호를 수신하는 장치가 설치되어 있다. 하나의 탑에서 발사된 레이저 신호는 가장 먼저 만나는 단 하나의 탑에서만 수신이 가능하다.
+//예를 들어 높이가 6, 9, 5, 7, 4인 다섯 개의 탑이 수평 직선에 일렬로 서 있고, 모든 탑에서는 주어진 탑 순서의 반대 방향(왼쪽 방향)으로 동시에 레이저 신호를 발사한다고 하자. 그러면, 높이가 4인 다섯 번째 탑에서 발사한 레이저 신호는 높이가 7인 네 번째 탑이 수신을 하고, 높이가 7인 네 번째 탑의 신호는 높이가 9인 두 번째 탑이, 높이가 5인 세 번째 탑의 신호도 높이가 9인 두 번째 탑이 수신을 한다. 높이가 9인 두 번째 탑과 높이가 6인 첫 번째 탑이 보낸 레이저 신호는 어떤 탑에서도 수신을 하지 못한다.
+//탑들의 개수 N과 탑들의 높이가 주어질 때, 각각의 탑에서 발사한 레이저 신호를 어느 탑에서 수신하는지를 알아내는 프로그램을 작성하라.
 
 //입력
-//첫 줄에 n (1 ≤ n ≤ 100,000)이 주어진다. 둘째 줄부터 n개의 줄에는 수열을 이루는 1이상 n이하의 정수가 하나씩 순서대로 주어진다. 물론 같은 정수가 두 번 나오는 일은 없다.
-//8
-//4
-//3
-//6
-//8
-//7
+//첫째 줄에 탑의 수를 나타내는 정수 N이 주어진다. N은 1 이상 500,000 이하이다. 둘째 줄에는 N개의 탑들의 높이가 직선상에 놓인 순서대로 하나의 빈칸을 사이에 두고 주어진다. 탑들의 높이는 1 이상 100,000,000 이하의 정수이다.
 //5
-//2
-//1
+//6 9 5 7 4
 
 //출력
-//입력된 수열을 만들기 위해 필요한 연산을 한 줄에 한 개씩 출력한다. push연산은 +로, pop 연산은 -로 표현하도록 한다. 불가능한 경우 NO를 출력한다.
-//+
-//+
-//+
-//+
-//-
-//-
-//+
-//+
-//-
-//+
-//+
-//-
-//-
-//-
-//-
-//-
+//첫째 줄에 주어진 탑들의 순서대로 각각의 탑들에서 발사한 레이저 신호를 수신한 탑들의 번호를 하나의 빈칸을 사이에 두고 출력한다. 만약 레이저 신호를 수신하는 탑이 존재하지 않으면 0을 출력한다.
+//0 0 2 2 4
 
 import Foundation
 
-let sequenceCount: Int = Int(readLine()!)!
-var stack: Stack<Int> = Stack<Int>()
-var increaser: Int = 1
-var sequence: [Int] = []
-var output: [String] = []
-var lastNum: Int?
-var isNo: Bool = false
+let towerCount: Int = Int(readLine()!)!
+var towerHeights: [Int] = readLine()!
+    .components(separatedBy: " ")
+    .compactMap { Int($0) }
 
-for _ in 0..<sequenceCount {
-    sequence.append(Int(readLine()!)!)
-}
+var outputs: [Int] = []
+var outerStack: Stack<Int> = Stack<Int>(items: towerHeights)
 
-for num in sequence {
-    if let topOfStack = stack.items.last {
-        if topOfStack == num {
-            stack.pop()
-            output.append("-")
-        } else if topOfStack > num {
-            isNo = true
-            break
-        }
+for towerHeight in towerHeights.reversed() {
+    outerStack.pop()
+    
+    guard var lastHeight: Int = outerStack.items.last else {
+        outputs.append(outerStack.items.count)
+        continue
     }
     
-    while increaser <= num {
-        stack.push(increaser)
-        output.append("+")
-        
-        if increaser == num {
-            stack.pop()
-            output.append("-")
-        }
-        
-        increaser = increaser + 1
+    var innerStack = outerStack
+    
+    while towerHeight > lastHeight && !innerStack.isEmpty {
+        innerStack.pop()
+        lastHeight = innerStack.items.last ?? 0
     }
     
-    lastNum = num
+    outputs.append(innerStack.items.count)
 }
 
-if isNo {
-    print("NO")
-} else {
-    for _output in output {
-        print(_output)
-    }
-}
+print(outputs.reversed().map { "\($0)" }.joined(separator: " "))
+

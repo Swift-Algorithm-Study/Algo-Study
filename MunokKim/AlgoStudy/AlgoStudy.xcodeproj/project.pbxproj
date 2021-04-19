@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B64CCAE262DA1B600401452 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B64CCAD262DA1B600401452 /* main.swift */; };
 		6B9527552619B82F00F820ED /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9527452619B00600F820ED /* LinkedList.swift */; };
 		6B9527572619B83000F820ED /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B95274C2619B6B500F820ED /* Container.swift */; };
-		6BBA9F4A262C715E0059FFEB /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBA9F49262C715E0059FFEB /* main.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -39,6 +39,7 @@
 		6B17C4BF260F905500AEC4BD /* PrintStars2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintStars2.swift; sourceTree = "<group>"; };
 		6B17C4C5260F931E00AEC4BD /* PrintStars3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintStars3.swift; sourceTree = "<group>"; };
 		6B17C4C9260F940100AEC4BD /* PrintStars4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintStars4.swift; sourceTree = "<group>"; };
+		6B64CCAD262DA1B600401452 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		6B95273526195E9C00F820ED /* Strfry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strfry.swift; sourceTree = "<group>"; };
 		6B95273B2619663000F820ED /* RoomNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomNumber.swift; sourceTree = "<group>"; };
 		6B95274026197D3100F820ED /* SumOfTwoNumbers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SumOfTwoNumbers.swift; sourceTree = "<group>"; };
@@ -50,7 +51,7 @@
 		6BA67DED2622A81100D3E64A /* JosephusPermutation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JosephusPermutation.swift; sourceTree = "<group>"; };
 		6BBA9F3E262C59630059FFEB /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
 		6BBA9F43262C66F60059FFEB /* Zero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zero.swift; sourceTree = "<group>"; };
-		6BBA9F49262C715E0059FFEB /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		6BBA9F49262C715E0059FFEB /* StackSequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackSequence.swift; sourceTree = "<group>"; };
 		6BBE88B426189223000BC102 /* Number.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Number.swift; sourceTree = "<group>"; };
 		6BBE88B92618A264000BC102 /* PhoneFee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneFee.swift; sourceTree = "<group>"; };
 		6BBE88BE2618D44B000BC102 /* SevenDwarfs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SevenDwarfs.swift; sourceTree = "<group>"; };
@@ -135,7 +136,8 @@
 			children = (
 				6BBA9F3E262C59630059FFEB /* Stack.swift */,
 				6BBA9F43262C66F60059FFEB /* Zero.swift */,
-				6BBA9F49262C715E0059FFEB /* main.swift */,
+				6BBA9F49262C715E0059FFEB /* StackSequence.swift */,
+				6B64CCAD262DA1B600401452 /* main.swift */,
 			);
 			path = Stack;
 			sourceTree = "<group>";
@@ -218,7 +220,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B9527552619B82F00F820ED /* LinkedList.swift in Sources */,
-				6BBA9F4A262C715E0059FFEB /* main.swift in Sources */,
+				6B64CCAE262DA1B600401452 /* main.swift in Sources */,
 				6B9527572619B83000F820ED /* Container.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
