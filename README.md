@@ -9,6 +9,7 @@
 
 ## 커리큘럼 
 유투버 바킹독님이 제시해주신 커리큘럼으로 진행! 
+
 -> [강의영상](https://www.youtube.com/playlist?list=PLtqbFd2VIQv4O6D6l9HcD732hdrnYb6CY) <-
 | 번호 | 주제 |
 | :--: | :--: |
