@@ -3,9 +3,9 @@
 ## 팀원 
  - [고영상](https://github.com/chris69223)
  - [김문옥](https://github.com/MunokKim)
- - [박시현](https://github.com/tlguszz1010) 
  - [전판근](https://github.com/Jason9789)
- - [김태욱](https://github.com/taeuk178)
+ - [민성홍](https://github.com/sunghong32)
+ - [유준상](https://github.com/js-yu1592) 
 
 ## 커리큘럼 
 유투버 바킹독님이 제시해주신 커리큘럼으로 진행! 
@@ -32,4 +32,6 @@
 
 
 ## 시간 
- - 매주 금요일 20:00 
+ - 매주 목요일 20:00 
+
+## 규칙 
