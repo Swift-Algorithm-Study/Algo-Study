@@ -23,6 +23,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		244EF6A8263B89F7009AB923 /* 1000.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1000.swift; sourceTree = "<group>"; };
+		244EF6AD263B8EF1009AB923 /* 2557.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2557.swift; sourceTree = "<group>"; };
+		244EF6B1263B9061009AB923 /* 10171.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 10171.swift; sourceTree = "<group>"; };
+		244EF6B5263B92B7009AB923 /* 10869.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 10869.swift; sourceTree = "<group>"; };
+		244EF6B9263B9899009AB923 /* 10871.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 10871.swift; sourceTree = "<group>"; };
+		244EF6BD263BAFD4009AB923 /* 9498.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 9498.swift; sourceTree = "<group>"; };
+		244EF6C1263BB26F009AB923 /* 2752.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2752.swift; sourceTree = "<group>"; };
 		24F0C4C0263A922E0075ADE4 /* JunsangYu */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = JunsangYu; sourceTree = BUILT_PRODUCTS_DIR; };
 		24F0C4C3263A922E0075ADE4 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -38,6 +45,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		244EF6A7263B8111009AB923 /* BasicCode */ = {
+			isa = PBXGroup;
+			children = (
+				244EF6A8263B89F7009AB923 /* 1000.swift */,
+				244EF6AD263B8EF1009AB923 /* 2557.swift */,
+				244EF6B1263B9061009AB923 /* 10171.swift */,
+				244EF6B5263B92B7009AB923 /* 10869.swift */,
+				244EF6B9263B9899009AB923 /* 10871.swift */,
+				244EF6BD263BAFD4009AB923 /* 9498.swift */,
+				244EF6C1263BB26F009AB923 /* 2752.swift */,
+			);
+			name = BasicCode;
+			path = "기초 코드 작성 요령 2";
+			sourceTree = "<group>";
+		};
 		24F0C4B7263A922E0075ADE4 = {
 			isa = PBXGroup;
 			children = (
@@ -57,6 +79,7 @@
 		24F0C4C2263A922E0075ADE4 /* JunsangYu */ = {
 			isa = PBXGroup;
 			children = (
+				244EF6A7263B8111009AB923 /* BasicCode */,
 				24F0C4C3263A922E0075ADE4 /* main.swift */,
 			);
 			path = JunsangYu;
