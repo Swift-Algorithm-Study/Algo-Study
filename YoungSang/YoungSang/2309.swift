@@ -7,34 +7,24 @@
 
 import Foundation
 
-func combos<T>(elements: ArraySlice<T>, k: Int) -> [[T]] {
-    if k == 0 {
-        return [[]]
-    }
-
-    guard let first = elements.first else {
-        return []
-    }
-
-    let head = [first]
-    let subcombos = combos(elements: elements, k: k - 1)
-    var ret = subcombos.map { head + $0 }
-    ret += combos(elements: elements.dropFirst(), k: k)
-
-    return ret
+var dwarfs = [Int]()
+for _ in 0..<9 {
+    dwarfs.append(Int(readLine()!)!)
 }
 
-func combos<T>(elements: Array<T>, k: Int) -> [[T]] {
-    return combos(elements: ArraySlice(elements), k: k)
+let dwarfsHeightSum = dwarfs.reduce(0, +)
+
+outloop: for i in 0..<dwarfs.count-1 {
+    for j in (i+1)..<dwarfs.count {
+        if (dwarfsHeightSum - (dwarfs[i] + dwarfs[j])) == 100 {
+            dwarfs[i] = 0
+            dwarfs[j] = 0
+            break outloop;
+        }
+    }
 }
-var nums = readLine()!.split(separator: " ").map{Int($0)!}
-var numCount = 0
-combos(elements:nums,k:7)
-var total = 100
-print(nums)
-//for i in 0..<nums.count{
-//    if  total == nums[i].reduce(0,+){
-//        numCount += 1
-//    }
-//}
-//print(numCount)
+
+dwarfs.sort()
+for i in 2..<dwarfs.count {
+    print(dwarfs[i])
+}
