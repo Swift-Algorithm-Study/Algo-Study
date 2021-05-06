@@ -1,144 +1,52 @@
+
 //
 //  5397.swift
- /*
-1. 백스페이스 - 커서 바로 앞에 글자 존재하면 지우기
-2.< > 로 주어지는데 커서의 위치를 움직이면? 오른쪽 1만큼?
+//  YoungSang
+
+/*해결방법
+하나가 아닌 두개의 스택을 사용한다.(stack1, stack2)
+알파벳이 나왔을 경우 stack1에 쌓는다.
+"-"가 나올경우 stack1에서 pop을 진행한다.
+"<" 가 나올경우 stack1에서 pop을 진행하고 stack2에 쌓는다.
+">" 가 나올경우 stack2에서 pop을 진행하고 stack1에 쌓는다.
+마지막으로 stack2에 있는 문자를 반전시킨후 stack1 뒤에 붙혀준다.
 */
+
 import Foundation
 
 
-class Node<T: Equatable> {
-    var value: T
-    var next: Node?
-
-    init(value: T, next: Node? = nil) {
-        self.value = value
-        self.next = next
-    }
-}
-
-class LinkedList<T: Equatable> {
-    var head: Node<T>?
-    var tail: Node<T>?
-
-    init(head: Node<T>? = nil) {
-        self.head = head
-        self.tail = head
-    }
-
-    func size() -> Int {
-        guard var node = self.head else {
-            return 0
-        }
-        var count = 0
-        while node.next != nil {
-            count += 1
-            node = node.next!
-        }
-        return count
-    }
-
-
-    func findNode(at index: Int) -> Node<T>? {
-        guard var node = self.head else {
-            return nil
-        }
-        for _ in 1...index {
-            guard let nextNode = node.next else {
-                return nil
-            }
-            node = nextNode
-        }
-        return node
-    }
-
-    func append(_ newNode: Node<T>) {
-        if let tail = self.tail {
-            tail.next = newNode
-            self.tail = tail.next
-        } else {
-            self.head = newNode
-            self.tail = newNode
-        }
-    }
-
-    func insert(_ newNode: Node<T>, at index: Int) {
-        if self.head == nil {
-            self.head = newNode
-            self.tail = newNode
-            return
-        }
-        guard let frontNode = findNode(at: index-1) else {
-            self.tail?.next = newNode
-            self.tail = newNode
-            return
-        }
-        guard let nextNode = frontNode.next else {
-            frontNode.next = newNode
-            self.tail = newNode
-            return
-        }
-        newNode.next = nextNode
-        frontNode.next = newNode
-    }
-
-    func remove(at index: Int) {
-        guard let frontNode = findNode(at: index-1) else {
-            return
-        }
-        guard let removeNode = frontNode.next else {
-            return
-        }
-        guard let nextNode = removeNode.next else {
-            frontNode.next = nil
-            self.tail = frontNode
-            return
-        }
-        frontNode.next = nextNode
-    }
-
-    func contains(_ value: T) -> Bool {
-        guard var node = self.head else {
-            return false
-        }
-        while true {
-            if node.value == value {
-                return true
-            }
-            guard let next = node.next else {
-                return false
-            }
-            node = next
-        }
-    }
-
-    func firstIndex(of value: T) -> Int? {
-        guard var node = self.head else {
-            return nil
-        }
-        var count = 0
-        while true {
-            if node.value == value {
-                return count
-            }
-            guard let next = node.next else {
-                return nil
-            }
-            node = next
-            count += 1
-        }
-    }
-}
-
 var input = Int(readLine()!)!
+var result = ""
 
-for i in 0..<input{
-    var str = readLine()!.split(separator:"").map
+func stack()->String{
     var stack1:[String] = []
     var stack2:[String] = []
-    if
+    var str = readLine()!
+    for i in str{
+        switch i{
+        case "<":
+            if !stack1.isEmpty{ //비어있지 않으면
+                stack2.append(stack1.popLast()!)
+            }else{continue} //비어있으면 계속하고
+        case ">":
+            if !stack2.isEmpty{
+                stack1.append(stack2.popLast()!)
+            }else{continue}
+        case "-":
+            if !stack1.isEmpty{
+                stack1.popLast()!
+            }else{continue}
+        default:
+            stack1.append("\(i)")
+        }
+        stack2.reverse()
+    }
+    
+    return (stack1 + stack2).joined(separator:"")
+    
 }
-var stack1:[String] = []
-var stack2:[String] = []
-
+for i in 0..<input{
+    result = stack()
+    print(result)
+}
 
