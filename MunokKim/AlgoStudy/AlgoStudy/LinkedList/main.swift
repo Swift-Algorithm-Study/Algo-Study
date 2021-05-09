@@ -21,27 +21,25 @@
 //예제와 같이 요세푸스 순열을 출력한다.
 //<3, 6, 2, 7, 5, 1, 4>
 
-import Foundation
+let inputs: [Int] = readLine()!
+    .split(separator: " ")
+    .map { Int($0)! }
 
-let inputs: [String] = readLine()!
-    .components(separatedBy: " ")
-
-let N: Int = Int(inputs.first!)!
-let K: Int = Int(inputs.last!)!
+let N: Int = inputs.first!
+let K: Int = inputs.last!
 var josephusPermutation: [Int] = Array(1...N)
-var rotator: Int = 1
-var output: String = ""
+var picker: Int = K - 1
 
-while (!josephusPermutation.isEmpty) {
-    if rotator == K {
-        let personForRemove: Int = josephusPermutation.removeFirst()
-        output.append("\(personForRemove)" + ", ")
-        rotator = 1
-    } else {
-        josephusPermutation.append(josephusPermutation.removeFirst())
-        rotator = rotator + 1
+print("<", terminator: "")
+
+while (josephusPermutation.count > 1) {
+    if picker >= josephusPermutation.count {
+        picker = picker % josephusPermutation.count
     }
+    
+    let pickedPerson: Int = josephusPermutation.remove(at: picker)
+    print("\(pickedPerson), ", terminator: "")
+    picker = picker + (K - 1)
 }
 
-output.removeLast(2)
-print("<" + output + ">")
+print("\(josephusPermutation[0])>")
