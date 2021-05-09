@@ -39,30 +39,31 @@
 //첫째 줄에 모든 명령어를 수행하고 난 후 편집기에 입력되어 있는 문자열을 출력한다.
 //yxz
 
-import Foundation
-
-let inputText: String = readLine()!
+var leftText: String = readLine()!
+var rightText: String = ""
 let commandCount: Int = Int(readLine()!)!
 
-var leftText: String = inputText
-var rightText: String = ""
-
 for _ in 0..<commandCount {
-    var command: String = readLine()!
+    let command: String = readLine()!
     
-    switch command.first! {
-    case "L" where !leftText.isEmpty:
-        let cursoringCharacter: Character = leftText.removeLast()
-        rightText.append(cursoringCharacter)
-    case "D" where !rightText.isEmpty:
-        let cursoringCharacter: Character = rightText.removeLast()
-        leftText.append(cursoringCharacter)
-    case "B" where !leftText.isEmpty:
-        leftText.removeLast()
-    case "P":
-        let newCharacter: Character = command.removeLast()
+    switch command {
+    case "L":
+        if !leftText.isEmpty {
+            let cursoringCharacter: Character = leftText.removeLast()
+            rightText.append(cursoringCharacter)
+        }
+    case "D":
+        if !rightText.isEmpty {
+            let cursoringCharacter: Character = rightText.removeLast()
+            leftText.append(cursoringCharacter)
+        }
+    case "B":
+        if !leftText.isEmpty {
+            leftText.removeLast()
+        }
+    default:
+        let newCharacter: Character = command.last!
         leftText.append(newCharacter)
-    default: break
     }
 }
 
