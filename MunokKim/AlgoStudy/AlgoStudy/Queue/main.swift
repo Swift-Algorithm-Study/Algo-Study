@@ -81,7 +81,10 @@ for _ in 0..<Int(readLine()!)! {
             print(-1)
         }
     default:
-        let X: Int = Int(command.dropFirst(5))!
-        queue.push(X)
+        let number = command
+            .split(separator: " ")
+            .last!
+        
+        queue.push(Int(number)!)
     }
 }
