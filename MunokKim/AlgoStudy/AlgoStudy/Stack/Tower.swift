@@ -26,17 +26,17 @@ import Foundation
 
 let towerCount: Int = Int(readLine()!)!
 var towerHeights: [Int] = readLine()!
-    .components(separatedBy: " ")
-    .compactMap { Int($0) }
+    .split(separator: " ")
+    .map { Int(String($0))! }
 
-var outputs: [Int] = []
+var outputs: String = ""
 var outerStack: Stack<Int> = Stack<Int>(items: towerHeights)
 
 for towerHeight in towerHeights.reversed() {
     outerStack.pop()
     
     guard var lastHeight: Int = outerStack.items.last else {
-        outputs.append(outerStack.items.count)
+        outputs = String(outerStack.items.count) + " " + outputs
         continue
     }
     
@@ -47,8 +47,9 @@ for towerHeight in towerHeights.reversed() {
         lastHeight = innerStack.items.last ?? 0
     }
     
-    outputs.append(innerStack.items.count)
+    outputs = String(innerStack.items.count) + " " + outputs
 }
 
-print(outputs.reversed().map { "\($0)" }.joined(separator: " "))
+outputs.removeLast()
 
+print(outputs)
