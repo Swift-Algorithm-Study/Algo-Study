@@ -102,6 +102,6 @@ struct Stack<Element>: Popable {
 
 // MARK: - Queue
 
-struct Queue<Element>: Insertable {
-    var items: [Element] = [Element]()
-}
+//struct Queue<Element>: Insertable {
+//    var items: [Element] = [Element]()
+//}

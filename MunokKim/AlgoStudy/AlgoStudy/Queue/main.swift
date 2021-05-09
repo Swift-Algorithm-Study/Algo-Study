@@ -52,54 +52,36 @@
 //0
 //3
 
-var enqueue: [Int] = []
-var dequeue: [Int] = []
+var queue: Queue<Int> = Queue([])
 
 for _ in 0..<Int(readLine()!)! {
     let command: String = readLine()!
     
     switch command {
     case "pop":
-        if dequeue.isEmpty {
-            dequeue = enqueue.reversed()
-            enqueue.removeAll()
-        }
-        
-        if let pop: Int = dequeue.popLast() {
-           print(pop)
+        if let pop: Int = queue.pop() {
+            print(pop)
         } else {
             print(-1)
         }
     case "size":
-        print(enqueue.count + dequeue.count)
+        print(queue.count)
     case "empty":
-        if enqueue.isEmpty && dequeue.isEmpty {
-            print(1)
-        } else {
-            print(0)
-        }
+        print(queue.isEmpty)
     case "front":
-        if dequeue.isEmpty {
-            if enqueue.isEmpty {
-                print(-1)
-            } else {
-                print(enqueue.first!)
-            }
+        if let front: Int = queue.first {
+            print(front)
         } else {
-            print(dequeue.last!)
+            print(-1)
         }
     case "back":
-        if dequeue.isEmpty {
-            if enqueue.isEmpty {
-                print(-1)
-            } else {
-                print(enqueue.last!)
-            }
+        if let back: Int = queue.last {
+            print(back)
         } else {
-            print(dequeue.first!)
+            print(-1)
         }
     default:
         let X: Int = Int(command.dropFirst(5))!
-        enqueue.append(X)
+        queue.push(X)
     }
 }
