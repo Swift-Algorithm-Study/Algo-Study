@@ -71,6 +71,8 @@ extension LinkedList {
 
 extension LinkedList {
     func node(at index: Int) -> Node<T>? {
+        if index < 0 { return nil }
+        
         if index == 0 {
             return head
         } else {
@@ -104,8 +106,9 @@ extension LinkedList {
         }
         
         guard let frontNode = node(at: index - 1) else {
-            self.tail?.next = newNode
-            self.tail = newNode
+            let nextNode = head
+            self.head = newNode
+            newNode.next = nextNode
             return
         }
         guard let nextNode = frontNode.next else {
@@ -123,8 +126,11 @@ extension LinkedList {
     }
     
     func remove(at index: Int) -> T? {
-        guard let frontNode = node(at: index - 1)
-        else { return nil }
+        guard let frontNode = node(at: index - 1) else {
+            let removeNode = head
+            self.head = removeNode?.next
+            return removeNode?.value
+        }
         guard let removeNode = frontNode.next
         else { return nil }
         guard let nextNode = removeNode.next else {
@@ -140,5 +146,16 @@ extension LinkedList {
     
     public func removeLast() -> T? {
         return remove(at: self.count - 1)
+    }
+}
+
+// MARK: CustomStringConvertible
+
+extension Node: CustomStringConvertible {
+    public var description: String {
+        guard let next = next
+        else { return "\(value)" }
+        
+        return "\(value) -> " + String(describing: next) + " "
     }
 }

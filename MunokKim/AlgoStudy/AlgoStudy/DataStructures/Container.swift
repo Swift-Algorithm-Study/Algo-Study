@@ -32,7 +32,6 @@ protocol Container: SelfPrintable {
 }
 
 extension Container {
-    
     mutating func append(item: ItemType) {
         items.append(item)
     }
@@ -41,8 +40,18 @@ extension Container {
         return items.count
     }
     
+    var isEmpty: Bool {
+        return items.isEmpty
+    }
+    
     subscript(i: Int) -> ItemType {
         return items[i]
+    }
+}
+
+extension Container where Self.ItemType: CustomStringConvertible {
+    var description: String {
+        return items.reduce("") { $0 + String(describing: $1) }
     }
 }
 
@@ -57,6 +66,7 @@ protocol Popable: Container {
 
 extension Popable {
     mutating func pop() -> ItemType? {
+        guard !isEmpty else { return nil }
         return items.removeLast()
     }
     
@@ -92,6 +102,6 @@ struct Stack<Element>: Popable {
 
 // MARK: - Queue
 
-struct Queue<Element>: Insertable {
-    var items: [Element] = [Element]()
-}
+//struct Queue<Element>: Insertable {
+//    var items: [Element] = [Element]()
+//}
