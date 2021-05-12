@@ -2,89 +2,54 @@
 //  main.swift
 //  AlgoStudy
 //
-//  Created by 김문옥 on 2021/05/09.
+//  Created by 김문옥 on 2021/05/12.
 //
 
-// https://www.acmicpc.net/problem/18258
-// Baekjoon 18258번 큐2
+// https://programmers.co.kr/learn/courses/30/lessons/42586?language=swift
+// 프로그래머스 - 스택/큐 > 기능개발
 
-//문제
-//정수를 저장하는 큐를 구현한 다음, 입력으로 주어지는 명령을 처리하는 프로그램을 작성하시오.
-//명령은 총 여섯 가지이다.
-//push X: 정수 X를 큐에 넣는 연산이다.
-//pop: 큐에서 가장 앞에 있는 정수를 빼고, 그 수를 출력한다. 만약 큐에 들어있는 정수가 없는 경우에는 -1을 출력한다.
-//size: 큐에 들어있는 정수의 개수를 출력한다.
-//empty: 큐가 비어있으면 1, 아니면 0을 출력한다.
-//front: 큐의 가장 앞에 있는 정수를 출력한다. 만약 큐에 들어있는 정수가 없는 경우에는 -1을 출력한다.
-//back: 큐의 가장 뒤에 있는 정수를 출력한다. 만약 큐에 들어있는 정수가 없는 경우에는 -1을 출력한다.
+//프로그래머스 팀에서는 기능 개선 작업을 수행 중입니다. 각 기능은 진도가 100%일 때 서비스에 반영할 수 있습니다.
+//또, 각 기능의 개발속도는 모두 다르기 때문에 뒤에 있는 기능이 앞에 있는 기능보다 먼저 개발될 수 있고, 이때 뒤에 있는 기능은 앞에 있는 기능이 배포될 때 함께 배포됩니다.
+//먼저 배포되어야 하는 순서대로 작업의 진도가 적힌 정수 배열 progresses와 각 작업의 개발 속도가 적힌 정수 배열 speeds가 주어질 때 각 배포마다 몇 개의 기능이 배포되는지를 return 하도록 solution 함수를 완성하세요.
 
-//입력
-//첫째 줄에 주어지는 명령의 수 N (1 ≤ N ≤ 2,000,000)이 주어진다. 둘째 줄부터 N개의 줄에는 명령이 하나씩 주어진다. 주어지는 정수는 1보다 크거나 같고, 100,000보다 작거나 같다. 문제에 나와있지 않은 명령이 주어지는 경우는 없다.
-//15
-//push 1
-//push 2
-//front
-//back
-//size
-//empty
-//pop
-//pop
-//pop
-//size
-//empty
-//pop
-//push 3
-//empty
-//front
+//제한 사항
+//작업의 개수(progresses, speeds배열의 길이)는 100개 이하입니다.
+//작업 진도는 100 미만의 자연수입니다.
+//작업 속도는 100 이하의 자연수입니다.
+//배포는 하루에 한 번만 할 수 있으며, 하루의 끝에 이루어진다고 가정합니다. 예를 들어 진도율이 95%인 작업의 개발 속도가 하루에 4%라면 배포는 2일 뒤에 이루어집니다.
 
-//출력
-//출력해야하는 명령이 주어질 때마다, 한 줄에 하나씩 출력한다.
-//1
-//2
-//2
-//0
-//1
-//2
-//-1
-//0
-//1
-//-1
-//0
-//3
+//입출력 예
+//progresses    speeds    return
+//[93, 30, 55]    [1, 30, 5]    [2, 1]
+//[95, 90, 99, 99, 80, 99]    [1, 1, 1, 1, 1, 1]    [1, 3, 2]
 
-var queue: Queue<Int> = Queue([])
-
-for _ in 0..<Int(readLine()!)! {
-    let command: String = readLine()!
+func solution(_ progresses: [Int], _ speeds: [Int]) -> [Int] {
+    var _progresses: [Int] = progresses
+    var _speeds: [Int] = speeds
+    var isComplete: Bool = false
+    var deploys: [Int] = []
     
-    switch command {
-    case "pop":
-        if let pop: Int = queue.pop() {
-            print(pop)
-        } else {
-            print(-1)
-        }
-    case "size":
-        print(queue.count)
-    case "empty":
-        print(queue.isEmpty)
-    case "front":
-        if let front: Int = queue.first {
-            print(front)
-        } else {
-            print(-1)
-        }
-    case "back":
-        if let back: Int = queue.last {
-            print(back)
-        } else {
-            print(-1)
-        }
-    default:
-        let number = command
-            .split(separator: " ")
-            .last!
+    while !_progresses.isEmpty {
+        var deployCount: Int = 0
         
-        queue.push(Int(number)!)
+        for index in 0..<_progresses.count {
+            let _index: Int = index - deployCount
+            _progresses[_index] = _progresses[_index] + _speeds[_index]
+            isComplete = (_index == 0 || isComplete) && _progresses[_index] >= 100
+            
+            if isComplete {
+                _progresses.remove(at: _index)
+                _speeds.remove(at: _index)
+                deployCount = deployCount + 1
+            }
+        }
+        
+        if deployCount > 0 {
+            deploys.append(deployCount)
+        }
     }
+    
+    return deploys
 }
+
+print(solution([95, 90, 99, 99, 80, 99], [1, 1, 1, 1, 1, 1]))
