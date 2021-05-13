@@ -8,12 +8,10 @@
 // 시간초과....
 
 import Foundation
-
-var n = Int(readLine()!) ?? 0
 var result: Array<Int> = []
 var stack = readLine()!.split(separator: " ").map { Int($0) ?? 0}
 
-outer : for _ in 0..<n {
+outer : for _ in 0..<Int(readLine()!)! {
     let last = stack.removeLast()
 
     inner : for i in (0..<(stack.count)).reversed() {

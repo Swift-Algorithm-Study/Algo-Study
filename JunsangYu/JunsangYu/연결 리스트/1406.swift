@@ -5,38 +5,32 @@
 //  Created by 유준상 on 2021/05/02.
 //
 
-// 시간초과 !!!!!!!!!!!!!!!!!!!!!!!!!!!
 import Foundation
 
-let str = readLine()!
-let n = Int(readLine()!) ?? 0
-
-var stackL = str
+var stackL = readLine()!
 var stackR = ""
 
-for _ in 0..<n {
-    var command = readLine()!
+for _ in 0..<Int(readLine()!)! {
+    let command = readLine()!
     
     switch command {
     case "L":
-        if stackL != "" {
-            let val = stackL.removeLast()
-            stackR.append(val)
+        if !stackL.isEmpty {
+            stackR.append(stackL.removeLast())
         }
     case "D":
-        if stackR != "" {
-            let val = stackR.removeLast()
-            stackL.append(val)
+        if !stackR.isEmpty {
+            stackL.append(stackR.removeLast())
         }
     case "B":
-        if stackL != "" {
+        if !stackL.isEmpty {
             stackL.removeLast()
         }
     default:
-        let val = command.removeLast()
-        stackL.append(val)
+        stackL.append(command.last!)
     
     }
 }
 
 print(stackL+stackR.reversed())
+
