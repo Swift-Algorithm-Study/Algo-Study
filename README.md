@@ -3,7 +3,7 @@
 ## 팀원 
  - [고영상](https://github.com/chris69223)
  - [김문옥](https://github.com/MunokKim)
- - [전판근](https://github.com/Jason9789)
+ - [김태훈](https://github.com/thoonk)
  - [민성홍](https://github.com/sunghong32)
  - [유준상](https://github.com/js-yu1592) 
 
