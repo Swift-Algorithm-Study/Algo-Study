@@ -21,4 +21,4 @@ for _ in 0..<k {
         stack.append(val)
     }
 }
-print(stack.reduce(0, { $0 + $1}))
+print(stack.reduce(0, +))
