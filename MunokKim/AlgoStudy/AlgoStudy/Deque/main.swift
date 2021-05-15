@@ -2,41 +2,53 @@
 //  main.swift
 //  AlgoStudy
 //
-//  Created by 김문옥 on 2021/05/15.
+//  Created by 김문옥 on 2021/05/16.
 //
 
-// https://www.acmicpc.net/problem/1021
-// Baekjoon 1021번 회전하는 큐
+// https://www.acmicpc.net/problem/5430
+// Baekjoon 5430번 AC
 
-let firstLineInput: [Substring] = readLine()!
-    .split(separator: " ")
-let dequeSize: Int = Int(firstLineInput[0])!
-let locationCount: Int = Int(firstLineInput[1])!
-var locations: [Int] = readLine()!
-    .split(separator: " ")
-    .map { Int($0)! }
-var deque = Queue<Int>(Array(1...dequeSize))
-var operationCount: Int = 0
+import Foundation
 
-for (index, location) in locations.enumerated() {
-    while location != deque.first! {
-        operationCount = operationCount + 1
-        
-        if let indexOfLocation: Int = deque.firstIndex(of: location),
-           indexOfLocation <= deque.count / 2 {
-            deque.pushLast(deque.popFirst()!)
-        } else {
-            deque.pushFirst(deque.popLast()!)
+for _ in 0..<Int(readLine()!)! {
+    var isReversed: Bool = false
+    let functions: String = readLine()!
+    readLine()
+    var enqueue = readLine()!
+        .replacingOccurrences(of: "[|]", with: "")
+        .split(separator: ",")
+        .compactMap { Int(String($0)) }
+    var dequeue: [Int] = []
+    
+    functionsLoop: for function in functions {
+        switch function {
+        case "R":
+            isReversed.toggle()
+            dequeue = enqueue.reversed()
+        case "D":
+            if !enqueue.isEmpty {
+                if isReversed {
+                    enqueue.removeLast()
+                    dequeue = enqueue.reversed()
+                } else {
+                    dequeue.removeLast()
+                    enqueue = dequeue.reversed()
+                }
+            } else {
+                print("error")
+                break functionsLoop
+            }
+        default: break
         }
-//        print(operationCount)
-//        deque.enqueue.forEach { print($0, terminator: ", ") }
-//        print("")
-//        deque.dequeue.forEach { print($0, terminator: ", ") }
-//        print("")
-//        print("============================")
     }
     
-    deque.popFirst()
+    let _deque: [Int] = isReversed ? dequeue : enqueue
+    
+    let output = _deque
+        .map { String($0) }
+        .joined(separator: ",")
+    
+    print("[", terminator: "")
+    print(output)
+    print("]")
 }
-
-print(operationCount)
