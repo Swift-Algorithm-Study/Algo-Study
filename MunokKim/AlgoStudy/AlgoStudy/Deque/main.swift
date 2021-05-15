@@ -16,11 +16,6 @@ var locations: [Int] = readLine()!
     .split(separator: " ")
     .map { Int($0)! }
 var deque = Queue<Int>(Array(1...dequeSize))
-//deque.enqueue.forEach { print($0, terminator: ", ") }
-//print("")
-//deque.dequeue.forEach { print($0, terminator: ", ") }
-//print("")
-//print("============================")
 var operationCount: Int = 0
 
 for (index, location) in locations.enumerated() {
