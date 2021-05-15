@@ -5,7 +5,7 @@
 //  Created by 김문옥 on 2021/05/10.
 //
 
-struct Queue<Element>{
+struct Queue<Element: Equatable> {
     var enqueue: [Element]
     var dequeue: [Element] = []
     
@@ -37,15 +37,47 @@ struct Queue<Element>{
         self.enqueue = queue
     }
     
-    mutating func push(_ element: Element) {
+    mutating func pushFirst(_ element: Element) {
+        dequeue.append(element)
+    }
+    
+    mutating func pushLast(_ element: Element) {
         enqueue.append(element)
     }
     
-    mutating func pop() -> Element? {
+    mutating func popFirst() -> Element? {
         if dequeue.isEmpty {
             dequeue = enqueue.reversed()
             enqueue.removeAll()
         }
         return dequeue.popLast()
+    }
+    
+    mutating func popLast() -> Element? {
+        var returnValue: Element?
+        
+        if enqueue.isEmpty {
+            dequeue.reverse()
+            returnValue = dequeue.popLast()
+            dequeue.reverse()
+        } else {
+            returnValue = enqueue.popLast()
+        }
+        
+        return returnValue
+    }
+    
+    func contains(_ element: Element) -> Bool {
+        return enqueue.contains(element) || dequeue.contains(element)
+    }
+    
+    func firstIndex(of element: Element) -> Int? {
+        if let firstIndex: Int = dequeue.reversed().firstIndex(of: element) {
+            return firstIndex
+        } else if let firstIndex: Int = enqueue.firstIndex(of: element) {
+            return firstIndex + dequeue.count
+        } else {
+            return nil
+        }
     }
 }
