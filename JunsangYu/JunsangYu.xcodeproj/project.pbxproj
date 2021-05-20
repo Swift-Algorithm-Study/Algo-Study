@@ -29,6 +29,9 @@
 		2422D7FB263EDF900006F01A /* 1406.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = 1406.swift; path = "JunsangYu/연결 리스트/1406.swift"; sourceTree = SOURCE_ROOT; };
 		2422D7FD263EE4B70006F01A /* 5397.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = 5397.swift; path = "JunsangYu/연결 리스트/5397.swift"; sourceTree = SOURCE_ROOT; };
 		2428F55C264BA5EA003B0113 /* 빠른입력코드.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "빠른입력코드.swift"; sourceTree = "<group>"; };
+		243C3430264F9442002A7F2E /* 10866.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = 10866.swift; path = "JunsangYu/덱/10866.swift"; sourceTree = SOURCE_ROOT; };
+		243C3432264FA086002A7F2E /* 1021.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = 1021.swift; path = "JunsangYu/덱/1021.swift"; sourceTree = SOURCE_ROOT; };
+		243C34342650DAF3002A7F2E /* 5430.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = 5430.swift; path = "JunsangYu/덱/5430.swift"; sourceTree = SOURCE_ROOT; };
 		244BD72E264A42DF003571DE /* 기능개발.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "기능개발.swift"; path = "JunsangYu/큐/기능개발.swift"; sourceTree = SOURCE_ROOT; };
 		244EF6A8263B89F7009AB923 /* 1000.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1000.swift; sourceTree = "<group>"; };
 		244EF6AD263B8EF1009AB923 /* 2557.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2557.swift; sourceTree = "<group>"; };
@@ -40,6 +43,7 @@
 		2456087E263FB17D0025F131 /* 1158.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = 1158.swift; path = "JunsangYu/연결 리스트/1158.swift"; sourceTree = SOURCE_ROOT; };
 		2478788B264565D100B8E094 /* 18258.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = 18258.swift; path = "JunsangYu/큐/18258.swift"; sourceTree = SOURCE_ROOT; };
 		2478788D26456F7600B8E094 /* 2164.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = 2164.swift; path = "JunsangYu/큐/2164.swift"; sourceTree = SOURCE_ROOT; };
+		24E23113264E04B1002B5231 /* 10845.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = 10845.swift; path = "JunsangYu/큐/10845.swift"; sourceTree = SOURCE_ROOT; };
 		24E24348263FB20D00B47818 /* 10828.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = 10828.swift; path = "JunsangYu/스택/10828.swift"; sourceTree = SOURCE_ROOT; };
 		24E2434A263FC2C800B47818 /* 10773.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = 10773.swift; path = "JunsangYu/스택/10773.swift"; sourceTree = SOURCE_ROOT; };
 		24F0C4C0263A922E0075ADE4 /* JunsangYu */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = JunsangYu; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,8 +103,19 @@
 				2478788B264565D100B8E094 /* 18258.swift */,
 				2478788D26456F7600B8E094 /* 2164.swift */,
 				244BD72E264A42DF003571DE /* 기능개발.swift */,
+				24E23113264E04B1002B5231 /* 10845.swift */,
 			);
 			path = "큐";
+			sourceTree = "<group>";
+		};
+		24E23115264E04C1002B5231 /* 덱 */ = {
+			isa = PBXGroup;
+			children = (
+				243C3430264F9442002A7F2E /* 10866.swift */,
+				243C3432264FA086002A7F2E /* 1021.swift */,
+				243C34342650DAF3002A7F2E /* 5430.swift */,
+			);
+			path = "덱";
 			sourceTree = "<group>";
 		};
 		24F0C4B7263A922E0075ADE4 = {
@@ -122,6 +137,7 @@
 		24F0C4C2263A922E0075ADE4 /* JunsangYu */ = {
 			isa = PBXGroup;
 			children = (
+				24E23115264E04C1002B5231 /* 덱 */,
 				2456BEAE2644E245004F55EC /* 큐 */,
 				24560880263FB1DA0025F131 /* 스택 */,
 				242A90BC263EDCF80082BBBB /* 연결 리스트 */,
@@ -159,7 +175,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1240;
-				LastUpgradeCheck = 1240;
+				LastUpgradeCheck = 1250;
 				TargetAttributes = {
 					24F0C4BF263A922E0075ADE4 = {
 						CreatedOnToolsVersion = 12.4;
@@ -314,6 +330,7 @@
 		24F0C4C8263A922E0075ADE4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HF833JV2AF;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -325,6 +342,7 @@
 		24F0C4C9263A922E0075ADE4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HF833JV2AF;
 				ENABLE_HARDENED_RUNTIME = YES;
