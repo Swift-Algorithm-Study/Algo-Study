@@ -51,5 +51,5 @@ for _ in 0 ..< Int(readLine()!)! {
         .split(separator: ",")
         .map { Int(String($0))! }
     
-    print(oprt(&nums, by: p, n))
+    print(oprt(&nums, by: p))
 }
