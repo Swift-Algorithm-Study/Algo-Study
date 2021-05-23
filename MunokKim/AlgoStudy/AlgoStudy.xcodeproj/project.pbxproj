@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		6B63E37726484D7E00596DAF /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B63E37626484D7E00596DAF /* Queue.swift */; };
 		6B76CE08265A35E00024627A /* FileIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B76CE07265A35E00024627A /* FileIO.swift */; };
+		6B76CE0B265A4A630024627A /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B76CE0A265A4A630024627A /* main.swift */; };
 		6B9527552619B82F00F820ED /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9527452619B00600F820ED /* LinkedList.swift */; };
 		6B9527572619B83000F820ED /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B95274C2619B6B500F820ED /* Container.swift */; };
-		6BAC1AE22650476E00A42C88 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BAC1AE12650476E00A42C88 /* main.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -47,6 +47,7 @@
 		6B63E37626484D7E00596DAF /* Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
 		6B64CCAD262DA1B600401452 /* Tower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tower.swift; sourceTree = "<group>"; };
 		6B76CE07265A35E00024627A /* FileIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileIO.swift; sourceTree = "<group>"; };
+		6B76CE0A265A4A630024627A /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		6B95273526195E9C00F820ED /* Strfry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strfry.swift; sourceTree = "<group>"; };
 		6B95273B2619663000F820ED /* RoomNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomNumber.swift; sourceTree = "<group>"; };
 		6B95274026197D3100F820ED /* SumOfTwoNumbers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SumOfTwoNumbers.swift; sourceTree = "<group>"; };
@@ -58,7 +59,7 @@
 		6BA67DED2622A81100D3E64A /* JosephusPermutation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JosephusPermutation.swift; sourceTree = "<group>"; };
 		6BAC1ADC264FE15200A42C88 /* Deque.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deque.swift; sourceTree = "<group>"; };
 		6BAC1ADE2650174F00A42C88 /* RotatingQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotatingQueue.swift; sourceTree = "<group>"; };
-		6BAC1AE12650476E00A42C88 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		6BAC1AE12650476E00A42C88 /* AC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AC.swift; sourceTree = "<group>"; };
 		6BBA9F3E262C59630059FFEB /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
 		6BBA9F43262C66F60059FFEB /* Zero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zero.swift; sourceTree = "<group>"; };
 		6BBA9F49262C715E0059FFEB /* StackSequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackSequence.swift; sourceTree = "<group>"; };
@@ -99,6 +100,7 @@
 		6B17C47C260F149B00AEC4BD /* AlgoStudy */ = {
 			isa = PBXGroup;
 			children = (
+				6B76CE09265A49810024627A /* UseOfTheStack */,
 				6BAC1ADB264FE14100A42C88 /* Deque */,
 				6B63E36B2647EA7F00596DAF /* Queue */,
 				6BBA9F3C262C59390059FFEB /* Stack */,
@@ -144,6 +146,14 @@
 			path = Queue;
 			sourceTree = "<group>";
 		};
+		6B76CE09265A49810024627A /* UseOfTheStack */ = {
+			isa = PBXGroup;
+			children = (
+				6B76CE0A265A4A630024627A /* main.swift */,
+			);
+			path = UseOfTheStack;
+			sourceTree = "<group>";
+		};
 		6B9527442619AFEE00F820ED /* DataStructures */ = {
 			isa = PBXGroup;
 			children = (
@@ -161,7 +171,7 @@
 			children = (
 				6BAC1ADC264FE15200A42C88 /* Deque.swift */,
 				6BAC1ADE2650174F00A42C88 /* RotatingQueue.swift */,
-				6BAC1AE12650476E00A42C88 /* main.swift */,
+				6BAC1AE12650476E00A42C88 /* AC.swift */,
 			);
 			path = Deque;
 			sourceTree = "<group>";
@@ -256,8 +266,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B9527552619B82F00F820ED /* LinkedList.swift in Sources */,
+				6B76CE0B265A4A630024627A /* main.swift in Sources */,
 				6B9527572619B83000F820ED /* Container.swift in Sources */,
-				6BAC1AE22650476E00A42C88 /* main.swift in Sources */,
 				6B63E37726484D7E00596DAF /* Queue.swift in Sources */,
 				6B76CE08265A35E00024627A /* FileIO.swift in Sources */,
 			);
