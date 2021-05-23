@@ -8,18 +8,10 @@
 // https://www.acmicpc.net/problem/4949
 // Baekjoon 4949번 균형잡힌 세상
 
-var outputs: [Bool] = [] {
-    didSet {
-        print("OUTPUTS ", outputs)
-    }
-}
+var outputs: [Bool] = []
 
 while let strings: String = readLine(), strings != "." {
-    var stack: [Character] = [] {
-        didSet {
-            print("STACK ", stack)
-        }
-    }
+    var stack: [Character] = []
     
     for char in strings {
         switch char {
@@ -27,11 +19,15 @@ while let strings: String = readLine(), strings != "." {
         case "[": stack.append(char)
         case ")":
             if let stackLast: Character = stack.last, stackLast == "(" {
-                print("REMOVE ", stack.removeLast())
+                stack.removeLast()
+            } else {
+                stack.append(char)
             }
         case "]":
             if let stackLast: Character = stack.last, stackLast == "[" {
-                print("REMOVE ", stack.removeLast())
+                stack.removeLast()
+            } else {
+                stack.append(char)
             }
         default: break
         }
