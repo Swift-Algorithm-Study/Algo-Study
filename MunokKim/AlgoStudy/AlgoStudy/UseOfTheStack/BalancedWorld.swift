@@ -10,10 +10,10 @@
 
 var outputs: [Bool] = []
 
-while let strings: String = readLine(), strings != "." {
+while let str: String = readLine(), str != "." {
     var stack: [Character] = []
     
-    for char in strings {
+    for char in str {
         switch char {
         case "(": stack.append(char)
         case "[": stack.append(char)
