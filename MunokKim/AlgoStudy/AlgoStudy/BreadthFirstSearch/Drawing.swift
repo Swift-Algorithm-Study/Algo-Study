@@ -13,9 +13,8 @@ let input: [Int] = readLine()!
     .map { Int($0)! }
 let drawingHeight: Int = input[0]
 let drawingWidth: Int = input[1]
-let row: [Bool] = Array(repeating: Bool(), count: drawingWidth)
-var drawingMap: [[Bool]] = Array(repeating: row, count: drawingHeight)
-var visitedMap: [[Bool]] = Array(repeating: row, count: drawingHeight)
+var drawingMap: [[Bool]] = []
+var visitedMap: [[Bool]] = []
 var queue: [(Int, Int)] = []
 var drawingCount: Int = 0
 var biggestSize: Int = 0
@@ -31,13 +30,12 @@ func searchNear(_ coordinate: (Int, Int)) {
     }
 }
 
-for index in 0..<drawingHeight {
+for _ in 0..<drawingHeight {
     let row: [Bool] = readLine()!
         .split(separator: " ")
         .map { $0 == "1" }
-    drawingMap[index] = row
-    visitedMap[index] = row
-        .map { _ in false }
+    drawingMap.append(row)
+    visitedMap.append(row.map { _ in false })
 }
 
 for i in 0..<drawingHeight {
