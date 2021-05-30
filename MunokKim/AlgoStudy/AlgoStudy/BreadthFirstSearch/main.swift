@@ -64,6 +64,7 @@ while !queue.isEmpty {
 
 let unripedTomatos: [Int] = storeMap
     .flatMap { $0.filter { $0 == 0 } }
+
 if unripedTomatos.isEmpty {
     print(totalRipeDay == 0 ? totalRipeDay : totalRipeDay - 1)
 } else {
