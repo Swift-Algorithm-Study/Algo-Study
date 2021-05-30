@@ -8,24 +8,34 @@
 // https://www.acmicpc.net/problem/7576
 // Baekjoon 7576번 토마토
 
+struct Coordinate: Equatable {
+    let x: Int
+    let y: Int
+    
+    init(_ x: Int, _ y: Int) {
+        self.x = x
+        self.y = y
+    }
+}
+
 let input: [Int] = readLine()!
     .split(separator: " ")
     .map { Int($0)! }
 let storeWidth: Int = input[0]
 let storeHeight: Int = input[1]
 var storeMap: [[Int]] = []
-var queue: [(Int, Int)] = []
+var queue = Queue<Coordinate>([])
 var totalRipeDay: Int = 0
 
-func search(_ origin: (Int, Int), near coordinate: (Int, Int)) {
+func search(_ origin: Coordinate, near coordinate: (Int, Int)) {
     let (x, y) = coordinate
     guard x >= 0 && y >= 0 && x < storeWidth && y < storeHeight, storeMap[y][x] == 0
     else { return }
     
-    let ripeDay: Int = storeMap[origin.1][origin.0] + 1
+    let ripeDay: Int = storeMap[origin.y][origin.x] + 1
     storeMap[y][x] = ripeDay
     totalRipeDay = max(totalRipeDay, ripeDay)
-    queue.append((x, y))
+    queue.pushLast(Coordinate(x, y))
 }
 
 for _ in 0..<storeHeight {
@@ -38,17 +48,18 @@ for _ in 0..<storeHeight {
 for i in 0..<storeHeight {
     for j in 0..<storeWidth {
         if storeMap[i][j] == 1 {
-            queue.append((j, i))
+            queue.pushLast(Coordinate(j, i))
         }
     }
 }
 
 while !queue.isEmpty {
-    let (x, y) = queue.removeFirst()
-    search((x, y), near: (x, y - 1))
-    search((x, y), near: (x - 1, y))
-    search((x, y), near: (x, y + 1))
-    search((x, y), near: (x + 1, y))
+    if let coordinate: Coordinate = queue.popFirst() {
+        search(coordinate, near: (coordinate.x, coordinate.y - 1))
+        search(coordinate, near: (coordinate.x - 1, coordinate.y))
+        search(coordinate, near: (coordinate.x, coordinate.y + 1))
+        search(coordinate, near: (coordinate.x + 1, coordinate.y))
+    }
 }
 
 let unripedTomatos: [Int] = storeMap
