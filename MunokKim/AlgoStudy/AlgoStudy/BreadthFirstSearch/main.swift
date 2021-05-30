@@ -2,64 +2,43 @@
 //  main.swift
 //  AlgoStudy
 //
-//  Created by 김문옥 on 2021/05/29.
+//  Created by 김문옥 on 2021/05/30.
 //
+
+// https://www.acmicpc.net/problem/2178
+// Baekjoon 2178번 미로 탐색
 
 let input: [Int] = readLine()!
     .split(separator: " ")
     .map { Int($0)! }
-let drawingHeight: Int = input[0]
-let drawingWidth: Int = input[1]
-let horizontalMap: [Bool] = Array(repeating: Bool(), count: drawingWidth)
-var drawingMap: [[Bool]] = Array(repeating: horizontalMap, count: drawingHeight)
-var visitedMap: [[Bool]] = Array(repeating: horizontalMap, count: drawingHeight)
+let mazeHeight: Int = input[0]
+let mazeWidth: Int = input[1]
+var mazeMap: [[Int]] = []
 var queue: [(Int, Int)] = []
-var drawingCount: Int = 0
-var biggestSize: Int = 0
 
-func searchNear(_ coordinate: (Int, Int)) {
+func search(_ origin: (Int, Int), near coordinate: (Int, Int)) {
     let (x, y) = coordinate
-    guard x >= 0 && y >= 0 && x < drawingHeight && y < drawingWidth
+    guard x >= 0 && y >= 0 && x < mazeWidth && y < mazeHeight, mazeMap[y][x] == 1
     else { return }
     
-    if drawingMap[x][y] && !visitedMap[x][y] {
-        queue.append((x, y))
-        visitedMap[x][y] = true
-    }
+    mazeMap[y][x] = mazeMap[origin.1][origin.0] + 1
+    queue.append((x, y))
 }
 
-for index in 0..<drawingHeight {
-    let horizontalDrawing = readLine()!
-        .split(separator: " ")
-        .map { $0 == "1" }
-    drawingMap[index] = horizontalDrawing
-    visitedMap[index] = horizontalDrawing
-        .map { _ in false }
+for _ in 0..<mazeHeight {
+    let row: [Int] = readLine()!
+        .map { Int(String($0))! }
+    mazeMap.append(row)
 }
 
-for i in 0..<drawingHeight {
-    for j in 0..<drawingWidth {
-        if drawingMap[i][j] && !visitedMap[i][j] {
-            queue.append((i, j))
-            visitedMap[i][j] = true
-            drawingCount += 1
-            
-            var drawingSize: Int = 0
-            while !queue.isEmpty {
-                let (x, y) = queue.removeFirst()
-                drawingSize += 1
-                searchNear((x, y - 1))
-                searchNear((x - 1, y))
-                searchNear((x, y + 1))
-                searchNear((x + 1, y))
-            }
-            
-            if biggestSize < drawingSize {
-                biggestSize = drawingSize
-            }
-        }
-    }
+queue.append((0, 0))
+
+while !queue.isEmpty {
+    let (x, y) = queue.removeFirst()
+    search((x, y), near: (x, y - 1))
+    search((x, y), near: (x - 1, y))
+    search((x, y), near: (x, y + 1))
+    search((x, y), near: (x + 1, y))
 }
 
-print(drawingCount)
-print(biggestSize)
+print(mazeMap[mazeHeight - 1][mazeWidth - 1])
