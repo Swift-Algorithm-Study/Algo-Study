@@ -28,20 +28,26 @@ var queue = Queue<NumberingNode>([])
 var foundTime: Int = 0
 
 func search(nearby numberingNode: NumberingNode) {
-//    guard x >= 0 && y >= 0 && x < mazeWidth && y < mazeHeight, mazeMap[y][x] == 1
     guard !searchedQueue.contains(numberingNode.node) else { return }
     
-    mazeMap[y][x] = mazeMap[origin.1][origin.0] + 1
-    queue.append((x, y))
+    let addedNumber: Int = numberingNode.number + 1
+    searchedQueue.pushLast(numberingNode.node)
+    queue.pushLast(NumberingNode(number: addedNumber, node: numberingNode.node - 1))
+    queue.pushLast(NumberingNode(number: addedNumber, node: numberingNode.node + 1))
+    queue.pushLast(NumberingNode(number: addedNumber, node: numberingNode.node * 2))
 }
 
 queue.pushLast(NumberingNode(number: 0, node: N))
 
 while !queue.isEmpty {
     let currentNode: NumberingNode = queue.popFirst()!
+    
+    if currentNode.node == K {
+        print(currentNode.number)
+        break
+    }
+    
     search(nearby: NumberingNode(number: currentNode.number, node: currentNode.node - 1))
     search(nearby: NumberingNode(number: currentNode.number, node: currentNode.node + 1))
-    search(nearby: NumberingNode(number: currentNode.number, node: currentNode.node * 1))
+    search(nearby: NumberingNode(number: currentNode.number, node: currentNode.node * 2))
 }
-
-print(foundTime)
