@@ -27,7 +27,7 @@ var storeMap: [[Int]] = []
 var queue = Queue<Coordinate>([])
 var totalRipeDay: Int = 0
 
-func search(_ origin: Coordinate, near coordinate: (Int, Int)) {
+func search(_ origin: Coordinate, nearby coordinate: (Int, Int)) {
     let (x, y) = coordinate
     guard x >= 0 && y >= 0 && x < storeWidth && y < storeHeight, storeMap[y][x] == 0
     else { return }
@@ -55,10 +55,10 @@ for i in 0..<storeHeight {
 
 while !queue.isEmpty {
     if let coordinate: Coordinate = queue.popFirst() {
-        search(coordinate, near: (coordinate.x, coordinate.y - 1))
-        search(coordinate, near: (coordinate.x - 1, coordinate.y))
-        search(coordinate, near: (coordinate.x, coordinate.y + 1))
-        search(coordinate, near: (coordinate.x + 1, coordinate.y))
+        search(coordinate, nearby: (coordinate.x, coordinate.y - 1))
+        search(coordinate, nearby: (coordinate.x - 1, coordinate.y))
+        search(coordinate, nearby: (coordinate.x, coordinate.y + 1))
+        search(coordinate, nearby: (coordinate.x + 1, coordinate.y))
     }
 }
 

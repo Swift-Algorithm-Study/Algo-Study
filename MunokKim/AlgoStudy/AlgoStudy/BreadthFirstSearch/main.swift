@@ -2,45 +2,46 @@
 //  main.swift
 //  AlgoStudy
 //
-//  Created by eazel5 (Munok) on 2021/06/01.
+//  Created by eazel5 (Munok) on 2021/06/02.
 //
 
-// https://www.acmicpc.net/problem/7576
-// Baekjoon 7576번 토마토
+// https://www.acmicpc.net/problem/1697
+// Baekjoon 1697번 숨바꼭질
 
-struct Coordinate: Equatable {
-    let x: Int
-    let y: Int
+struct NumberingNode: Equatable {
+    let number: Int
+    let node: Int
     
-    init(_ x: Int, _ y: Int) {
-        self.x = x
-        self.y = y
+    init(number: Int, node: Int) {
+        self.number = number
+        self.node = node
     }
 }
 
 let input: [Int] = readLine()!
     .split(separator: " ")
     .map { Int($0)! }
-let mazeHeight: Int = input[0]
-let mazeWidth: Int = input[1]
-var mazeMap: [[Character]] = []
-var queue = Queue<Coordinate>([])
-var escapeTime: Int = 0
-var isEscape: Bool = false
+let N: Int = input[0]
+let K: Int = input[1]
+var searchedQueue = Queue<Int>([])
+var queue = Queue<NumberingNode>([])
+var foundTime: Int = 0
 
-for _ in 0..<mazeHeight {
-    let row: [Character] = readLine()!
-        .split(separator: " ")
-        .map { Character(String($0)) }
-    mazeMap.append(row)
+func search(nearby numberingNode: NumberingNode) {
+//    guard x >= 0 && y >= 0 && x < mazeWidth && y < mazeHeight, mazeMap[y][x] == 1
+    guard !searchedQueue.contains(numberingNode.node) else { return }
+    
+    mazeMap[y][x] = mazeMap[origin.1][origin.0] + 1
+    queue.append((x, y))
 }
 
-for i in 0..<mazeHeight {
-    for j in 0..<mazeWidth {
-        if mazeMap[i][j] == "J" || mazeMap[i][j] == "F" {
-            queue.pushLast(Coordinate(j, i))
-        }
-    }
+queue.pushLast(NumberingNode(number: 0, node: N))
+
+while !queue.isEmpty {
+    let currentNode: NumberingNode = queue.popFirst()!
+    search(nearby: NumberingNode(number: currentNode.number, node: currentNode.node - 1))
+    search(nearby: NumberingNode(number: currentNode.number, node: currentNode.node + 1))
+    search(nearby: NumberingNode(number: currentNode.number, node: currentNode.node * 1))
 }
 
-
+print(foundTime)

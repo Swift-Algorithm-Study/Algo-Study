@@ -16,7 +16,7 @@ let mazeWidth: Int = input[1]
 var mazeMap: [[Int]] = []
 var queue: [(Int, Int)] = []
 
-func search(_ origin: (Int, Int), near coordinate: (Int, Int)) {
+func search(_ origin: (Int, Int), nearby coordinate: (Int, Int)) {
     let (x, y) = coordinate
     guard x >= 0 && y >= 0 && x < mazeWidth && y < mazeHeight, mazeMap[y][x] == 1
     else { return }
@@ -35,10 +35,10 @@ queue.append((0, 0))
 
 while !queue.isEmpty {
     let (x, y) = queue.removeFirst()
-    search((x, y), near: (x, y - 1))
-    search((x, y), near: (x - 1, y))
-    search((x, y), near: (x, y + 1))
-    search((x, y), near: (x + 1, y))
+    search((x, y), nearby: (x, y - 1))
+    search((x, y), nearby: (x - 1, y))
+    search((x, y), nearby: (x, y + 1))
+    search((x, y), nearby: (x + 1, y))
 }
 
 print(mazeMap[mazeHeight - 1][mazeWidth - 1])
