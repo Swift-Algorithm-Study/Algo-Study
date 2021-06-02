@@ -36,7 +36,6 @@ queue.pushLast(NumberingNode(number: 0, node: N))
 
 while !queue.isEmpty {
     let currentNode: NumberingNode = queue.popFirst()!
-    print("currentNode::: ", currentNode)
     
     if currentNode.node == K {
         print(currentNode.number)
