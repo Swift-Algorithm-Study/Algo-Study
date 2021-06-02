@@ -23,7 +23,17 @@ let input: [Int] = readLine()!
     .map { Int($0)! }
 let mazeHeight: Int = input[0]
 let mazeWidth: Int = input[1]
-var mazeMap: [[String]] = []
+//var mazeMap: [[String]] = []
+var mazeMap: [[String]] = [] {
+    didSet {
+        if mazeMap.count == mazeHeight {
+            mazeMap.forEach {
+                print($0)
+            }
+            print("==================")
+        }
+    }
+}
 var queue = Queue<Coordinate>([])
 var escapeTime: Int = 0
 var isEscape: Bool = false
@@ -35,7 +45,6 @@ func search(_ origin: Coordinate, nearby coordinate: (Int, Int)) {
     
     let originValue: String = mazeMap[origin.y][origin.x]
     
-//    let ripeDay: Int = storeMap[origin.y][origin.x] + 1
     switch originValue {
     case "J":
         guard mazeMap[y][x] == "." else { return }
@@ -48,6 +57,7 @@ func search(_ origin: Coordinate, nearby coordinate: (Int, Int)) {
         guard mazeMap[y][x] != "F" else { return }
         mazeMap[y][x] = "F"
     default:
+        guard mazeMap[y][x] == "." else { return }
         mazeMap[y][x] = "\(Int(originValue)! + 1)"
         if x == 0 || y == 0 || x == mazeWidth - 1 || y == mazeHeight - 1 {
             escapeTime = Int(originValue)! + 2
