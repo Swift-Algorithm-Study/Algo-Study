@@ -2,7 +2,7 @@
 //  main.swift
 //  AlgoStudy
 //
-//  Created by 김문옥 on 2021/05/30.
+//  Created by eazel5 (Munok) on 2021/06/01.
 //
 
 // https://www.acmicpc.net/problem/7576
@@ -21,52 +21,26 @@ struct Coordinate: Equatable {
 let input: [Int] = readLine()!
     .split(separator: " ")
     .map { Int($0)! }
-let storeWidth: Int = input[0]
-let storeHeight: Int = input[1]
-var storeMap: [[Int]] = []
+let mazeHeight: Int = input[0]
+let mazeWidth: Int = input[1]
+var mazeMap: [[Character]] = []
 var queue = Queue<Coordinate>([])
-var totalRipeDay: Int = 0
+var escapeTime: Int = 0
+var isEscape: Bool = false
 
-func search(_ origin: Coordinate, near coordinate: (Int, Int)) {
-    let (x, y) = coordinate
-    guard x >= 0 && y >= 0 && x < storeWidth && y < storeHeight, storeMap[y][x] == 0
-    else { return }
-    
-    let ripeDay: Int = storeMap[origin.y][origin.x] + 1
-    storeMap[y][x] = ripeDay
-    totalRipeDay = max(totalRipeDay, ripeDay)
-    queue.pushLast(Coordinate(x, y))
-}
-
-for _ in 0..<storeHeight {
-    let row: [Int] = readLine()!
+for _ in 0..<mazeHeight {
+    let row: [Character] = readLine()!
         .split(separator: " ")
-        .map { Int($0)! }
-    storeMap.append(row)
+        .map { Character(String($0)) }
+    mazeMap.append(row)
 }
 
-for i in 0..<storeHeight {
-    for j in 0..<storeWidth {
-        if storeMap[i][j] == 1 {
+for i in 0..<mazeHeight {
+    for j in 0..<mazeWidth {
+        if mazeMap[i][j] == "J" || mazeMap[i][j] == "F" {
             queue.pushLast(Coordinate(j, i))
         }
     }
 }
 
-while !queue.isEmpty {
-    if let coordinate: Coordinate = queue.popFirst() {
-        search(coordinate, near: (coordinate.x, coordinate.y - 1))
-        search(coordinate, near: (coordinate.x - 1, coordinate.y))
-        search(coordinate, near: (coordinate.x, coordinate.y + 1))
-        search(coordinate, near: (coordinate.x + 1, coordinate.y))
-    }
-}
 
-let unripedTomatos: [Int] = storeMap
-    .flatMap { $0.filter { $0 == 0 } }
-
-if unripedTomatos.isEmpty {
-    print(totalRipeDay == 0 ? totalRipeDay : totalRipeDay - 1)
-} else {
-    print(-1)
-}
