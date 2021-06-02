@@ -27,27 +27,26 @@ var searchedQueue = Queue<Int>([])
 var queue = Queue<NumberingNode>([])
 var foundTime: Int = 0
 
-func search(nearby numberingNode: NumberingNode) {
-    guard !searchedQueue.contains(numberingNode.node) else { return }
-    
-    let addedNumber: Int = numberingNode.number + 1
-    searchedQueue.pushLast(numberingNode.node)
-    queue.pushLast(NumberingNode(number: addedNumber, node: numberingNode.node - 1))
-    queue.pushLast(NumberingNode(number: addedNumber, node: numberingNode.node + 1))
-    queue.pushLast(NumberingNode(number: addedNumber, node: numberingNode.node * 2))
+func search(_ origin: NumberingNode, nearby: NumberingNode) {
+    let addedNumber: Int = origin.number + 1
+    queue.pushLast(NumberingNode(number: addedNumber, node: nearby.node))
 }
 
 queue.pushLast(NumberingNode(number: 0, node: N))
 
 while !queue.isEmpty {
     let currentNode: NumberingNode = queue.popFirst()!
+    print("currentNode::: ", currentNode)
     
     if currentNode.node == K {
         print(currentNode.number)
         break
     }
     
-    search(nearby: NumberingNode(number: currentNode.number, node: currentNode.node - 1))
-    search(nearby: NumberingNode(number: currentNode.number, node: currentNode.node + 1))
-    search(nearby: NumberingNode(number: currentNode.number, node: currentNode.node * 2))
+    if !searchedQueue.contains(currentNode.node) {
+        searchedQueue.pushLast(currentNode.node)
+        search(currentNode, nearby: NumberingNode(number: currentNode.number, node: currentNode.node - 1))
+        search(currentNode, nearby: NumberingNode(number: currentNode.number, node: currentNode.node + 1))
+        search(currentNode, nearby: NumberingNode(number: currentNode.number, node: currentNode.node * 2))
+    }
 }
