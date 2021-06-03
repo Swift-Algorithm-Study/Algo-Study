@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		6B63E37726484D7E00596DAF /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B63E37626484D7E00596DAF /* Queue.swift */; };
 		6B76CE08265A35E00024627A /* FileIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B76CE07265A35E00024627A /* FileIO.swift */; };
-		6B76CE13265AA1A90024627A /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B76CE12265AA1A90024627A /* main.swift */; };
+		6B8A44142667B40600825BDC /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6771E282665C63900A675F7 /* main.swift */; };
 		6B9527552619B82F00F820ED /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9527452619B00600F820ED /* LinkedList.swift */; };
 		6B9527572619B83000F820ED /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B95274C2619B6B500F820ED /* Container.swift */; };
 /* End PBXBuildFile section */
@@ -51,7 +51,8 @@
 		6B76CE0C265A7C6D0024627A /* IronStick.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IronStick.swift; sourceTree = "<group>"; };
 		6B76CE0E265A8FD90024627A /* Parenthesis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parenthesis.swift; sourceTree = "<group>"; };
 		6B76CE10265A97380024627A /* StableString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StableString.swift; sourceTree = "<group>"; };
-		6B76CE12265AA1A90024627A /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		6B76CE12265AA1A90024627A /* valueOfParenthesis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = valueOfParenthesis.swift; sourceTree = "<group>"; };
+		6B86299B266270F600FFFA5F /* Drawing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drawing.swift; sourceTree = "<group>"; };
 		6B95273526195E9C00F820ED /* Strfry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strfry.swift; sourceTree = "<group>"; };
 		6B95273B2619663000F820ED /* RoomNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomNumber.swift; sourceTree = "<group>"; };
 		6B95274026197D3100F820ED /* SumOfTwoNumbers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SumOfTwoNumbers.swift; sourceTree = "<group>"; };
@@ -64,6 +65,8 @@
 		6BAC1ADC264FE15200A42C88 /* Deque.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deque.swift; sourceTree = "<group>"; };
 		6BAC1ADE2650174F00A42C88 /* RotatingQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotatingQueue.swift; sourceTree = "<group>"; };
 		6BAC1AE12650476E00A42C88 /* AC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AC.swift; sourceTree = "<group>"; };
+		6BB5C13626639CDF00D80869 /* MazeExpedition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MazeExpedition.swift; sourceTree = "<group>"; };
+		6BB5C1382663C7F800D80869 /* Tomatos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tomatos.swift; sourceTree = "<group>"; };
 		6BBA9F3E262C59630059FFEB /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
 		6BBA9F43262C66F60059FFEB /* Zero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zero.swift; sourceTree = "<group>"; };
 		6BBA9F49262C715E0059FFEB /* StackSequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackSequence.swift; sourceTree = "<group>"; };
@@ -72,6 +75,8 @@
 		6BBE88BE2618D44B000BC102 /* SevenDwarfs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SevenDwarfs.swift; sourceTree = "<group>"; };
 		6BC0CBC42621D2B6000A2B4A /* Editor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Editor.swift; sourceTree = "<group>"; };
 		E65094572631089000DA4E1A /* DecoratingTheRoofGarden.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecoratingTheRoofGarden.swift; sourceTree = "<group>"; };
+		E6771E282665C63900A675F7 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		E67E6E78266713B400D40C4A /* HideAndSeek.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideAndSeek.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +109,7 @@
 		6B17C47C260F149B00AEC4BD /* AlgoStudy */ = {
 			isa = PBXGroup;
 			children = (
+				6B86299A266270C600FFFA5F /* BreadthFirstSearch */,
 				6B76CE09265A49810024627A /* UseOfTheStack */,
 				6BAC1ADB264FE14100A42C88 /* Deque */,
 				6B63E36B2647EA7F00596DAF /* Queue */,
@@ -157,9 +163,21 @@
 				6B76CE0C265A7C6D0024627A /* IronStick.swift */,
 				6B76CE0E265A8FD90024627A /* Parenthesis.swift */,
 				6B76CE10265A97380024627A /* StableString.swift */,
-				6B76CE12265AA1A90024627A /* main.swift */,
+				6B76CE12265AA1A90024627A /* valueOfParenthesis.swift */,
 			);
 			path = UseOfTheStack;
+			sourceTree = "<group>";
+		};
+		6B86299A266270C600FFFA5F /* BreadthFirstSearch */ = {
+			isa = PBXGroup;
+			children = (
+				6B86299B266270F600FFFA5F /* Drawing.swift */,
+				6BB5C13626639CDF00D80869 /* MazeExpedition.swift */,
+				6BB5C1382663C7F800D80869 /* Tomatos.swift */,
+				E6771E282665C63900A675F7 /* main.swift */,
+				E67E6E78266713B400D40C4A /* HideAndSeek.swift */,
+			);
+			path = BreadthFirstSearch;
 			sourceTree = "<group>";
 		};
 		6B9527442619AFEE00F820ED /* DataStructures */ = {
@@ -274,7 +292,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B9527552619B82F00F820ED /* LinkedList.swift in Sources */,
-				6B76CE13265AA1A90024627A /* main.swift in Sources */,
+				6B8A44142667B40600825BDC /* main.swift in Sources */,
 				6B9527572619B83000F820ED /* Container.swift in Sources */,
 				6B63E37726484D7E00596DAF /* Queue.swift in Sources */,
 				6B76CE08265A35E00024627A /* FileIO.swift in Sources */,
