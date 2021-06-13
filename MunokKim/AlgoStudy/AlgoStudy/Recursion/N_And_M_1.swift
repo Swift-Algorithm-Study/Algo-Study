@@ -5,8 +5,8 @@
 //  Created by 김문옥 on 2021/06/13.
 //
 
-// https://www.acmicpc.net/problem/15650
-// Baekjoon 15650번 N과 M (2)
+// https://www.acmicpc.net/problem/15649
+// Baekjoon 15649번 N과 M (1)
 
 let input: [Int] = readLine()!
     .split(separator: " ")
@@ -26,16 +26,10 @@ func backTracking(node: Int) {
         // 노드가 답이 되기에 유망한지 판별
         guard isPromisingArray[i] else { continue }
         
-        for j in 1...i {
-            isPromisingArray[j] = false
-        }
-        
+        isPromisingArray[i] = false
         outputs[node] = i
         backTracking(node: node + 1)
-        
-        for j in 1...i {
-            isPromisingArray[j] = true
-        }
+        isPromisingArray[i] = true
     }
 }
 
