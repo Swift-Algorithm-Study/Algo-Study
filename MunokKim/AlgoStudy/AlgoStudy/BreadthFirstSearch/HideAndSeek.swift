@@ -25,7 +25,6 @@ let N: Int = input[0]
 let K: Int = input[1]
 var searchedQueue = Queue<Int>([])
 var queue = Queue<NumberingNode>([])
-var foundTime: Int = 0
 
 func search(_ origin: NumberingNode, nearby: NumberingNode) {
     let addedNumber: Int = origin.number + 1
