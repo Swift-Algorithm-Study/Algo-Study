@@ -23,7 +23,6 @@ func backTracking(node: Int) {
     }
     
     for i in 1...N {
-        // 노드가 답이 되기에 유망한지 판별
         guard isSearchEnabled[i] else { continue }
         
         for j in 0..<i {
