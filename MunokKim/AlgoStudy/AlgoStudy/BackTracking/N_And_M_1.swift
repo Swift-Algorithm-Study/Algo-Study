@@ -14,7 +14,7 @@ let input: [Int] = readLine()!
 let N: Int = input[0]
 let M: Int = input[1]
 var outputs: [Int] = Array(repeating: 0, count: M)
-var isPromisingArray: [Bool] = Array(repeating: true, count: N + 1)
+var isSearchEnabled: [Bool] = Array(repeating: true, count: N + 1)
 
 func backTracking(node: Int) {
     guard node < outputs.count else {
@@ -24,12 +24,12 @@ func backTracking(node: Int) {
     
     for i in 1...N {
         // 노드가 답이 되기에 유망한지 판별
-        guard isPromisingArray[i] else { continue }
+        guard isSearchEnabled[i] else { continue }
         
-        isPromisingArray[i] = false
+        isSearchEnabled[i] = false
         outputs[node] = i
         backTracking(node: node + 1)
-        isPromisingArray[i] = true
+        isSearchEnabled[i] = true
     }
 }
 
