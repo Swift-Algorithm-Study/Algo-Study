@@ -18,7 +18,7 @@ let naturalNumbers: [Int] = readLine()!
     .map { Int($0)! }
     .sorted()
 var outputs: [Int] = Array(repeating: 0, count: M)
-var isPromisingArray: [Bool] = Array(repeating: true, count: N + 1)
+var isSearchEnabled: [Bool] = Array(repeating: true, count: N + 1)
 
 func backTracking(node: Int) {
     guard node < outputs.count else {
@@ -27,15 +27,14 @@ func backTracking(node: Int) {
     }
     
     for (index, naturalNumber) in naturalNumbers.enumerated() {
-        // 노드가 답이 되기에 유망한지 판별
-        guard isPromisingArray[index] else { continue }
+        guard isSearchEnabled[index] else { continue }
         
-        isPromisingArray[index] = false
+        isSearchEnabled[index] = false
         
         outputs[node] = naturalNumber
         backTracking(node: node + 1)
         
-        isPromisingArray[index] = true
+        isSearchEnabled[index] = true
     }
 }
 
