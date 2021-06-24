@@ -13,17 +13,18 @@ let input: [Int] = readLine()!
     .map { Int($0)! }
 let N: Int = input[0]
 let M: Int = input[1]
-var outputs: [Int] = Array(repeating: 0, count: M)
+var outputs: [String] = []
 
 func backTracking(node: Int) {
-    guard node < outputs.count else {
-        print(outputs.reduce(into: "", { $0 += "\($1) " }))
+    guard node < M else {
+        print(outputs.joined(separator: " "))
         return
     }
     
     for i in 1...N {
-        outputs[node] = i
+        outputs.append(String(i))
         backTracking(node: node + 1)
+        outputs.popLast()
     }
 }
 
