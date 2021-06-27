@@ -2,19 +2,25 @@
 //  main.swift
 //  AlgoStudy
 //
-//  Created by 김문옥 on 2021/06/27.
+//  Created by 김문옥 on 2021/06/28.
 //
 
-// https://www.acmicpc.net/problem/15688
-// Baekjoon 15688번 수 정렬하기 5
+// https://www.acmicpc.net/problem/10814
+// Baekjoon 10814번 나이순 정렬
 
-let numberOfNumber: Int = Int(readLine()!)!
-var outputs: [Int] = []
+let numberOfMembers: Int = Int(readLine()!)!
+var members: [(Int, String)] = []
 
-for _ in 0..<numberOfNumber {
-    outputs.append(Int(readLine()!)!)
+for _ in 0..<numberOfMembers {
+    let input: [String] = readLine()!
+        .split(separator: " ")
+        .map { String($0) }
+    let ages: Int = Int(input[0])!
+    let name: String = input[1]
+    let member: (Int, String) = (ages, name)
+    members.append(member)
 }
 
-for output in outputs.sorted() {
-    print(output)
+for member in members.sorted(by: { $0.0 < $1.0 }) {
+    print("\(member.0) \(member.1)")
 }
