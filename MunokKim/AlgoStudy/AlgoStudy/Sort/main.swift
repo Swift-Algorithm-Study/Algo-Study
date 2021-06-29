@@ -5,22 +5,22 @@
 //  Created by 김문옥 on 2021/06/28.
 //
 
-// https://www.acmicpc.net/problem/10814
-// Baekjoon 10814번 나이순 정렬
+// https://www.acmicpc.net/problem/11650
+// Baekjoon 11650번 좌표 정렬하기
 
-let numberOfMembers: Int = Int(readLine()!)!
-var members: [(Int, String)] = []
+let numberOfDots: Int = Int(readLine()!)!
+var coordinates: [(x: Int, y: Int)] = []
 
-for _ in 0..<numberOfMembers {
-    let input: [String] = readLine()!
+for _ in 0..<numberOfDots {
+    let input: [Int] = readLine()!
         .split(separator: " ")
-        .map { String($0) }
-    let ages: Int = Int(input[0])!
-    let name: String = input[1]
-    let member: (Int, String) = (ages, name)
-    members.append(member)
+        .map { Int(String($0))! }
+    let coordinate: (x: Int, y: Int) = (x: input[0], y: input[1])
+    coordinates.append(coordinate)
 }
 
-for member in members.sorted(by: { $0.0 < $1.0 }) {
-    print("\(member.0) \(member.1)")
+coordinates.sort { $0.x == $1.x ? $0.y < $1.y : $0.x < $1.x }
+
+for coordinate in coordinates {
+    print("\(coordinate.x) \(coordinate.y)")
 }
